@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-11T11:00:38.070Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="rnAf90t4xAdCo1H_FfSM" version="22.1.7" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-11T11:11:30.791Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="YvsF1A9-EQrrphBqmn5i" version="22.1.7" type="device">
   <diagram name="Page-1" id="94LBMi_QMn9_HoXm2CBJ">
-    <mxGraphModel dx="1590" dy="2128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="596" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -54,7 +54,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WB0CTs20dMvy2eO6RknB-251" value="#Employees" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" parent="WB0CTs20dMvy2eO6RknB-249" vertex="1">
+        <mxCell id="WB0CTs20dMvy2eO6RknB-251" value="Employee Capacity" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" parent="WB0CTs20dMvy2eO6RknB-249" vertex="1">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
