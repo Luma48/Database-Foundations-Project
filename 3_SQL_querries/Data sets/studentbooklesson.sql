@@ -1,2010 +1,911 @@
 CREATE TABLE studentbooklesson (
     BOOK_Id SERIAL PRIMARY KEY,
-    Student_Id INT,
-    Lesson_Id INT,
+    Student_Id SERIAL,
+    Lesson_Id SERIAL,
     vehicle_type VARCHAR(50),
     Passed_Theoretical BOOLEAN,
     FOREIGN KEY (Student_Id) REFERENCES STUDENT(STUDENT_ID),
     FOREIGN KEY (Lesson_Id) REFERENCES LESSON(LESSON_ID)
-);
-
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-035-5239', 1, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-903-5361', 2, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-614-2347', 3, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-201-2205', 4, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-154-7936', 5, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-424-8222', 6, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-445-2938', 7, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-993-0222', 8, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-468-0178', 9, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-677-8839', 10, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-699-8433', 11, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-048-9888', 12, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-931-5645', 13, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-073-8174', 14, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-261-1744', 15, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-713-6225', 16, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-834-2498', 17, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-230-9783', 18, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-695-4249', 19, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-830-6720', 20, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-342-1900', 21, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-133-8016', 22, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-179-0428', 23, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-360-7924', 24, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-916-3536', 25, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-358-9854', 26, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-356-7736', 27, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-742-3819', 28, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-490-3307', 29, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-421-7662', 30, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-727-9319', 31, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-023-8403', 32, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-006-0438', 33, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-872-0266', 34, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-449-8902', 35, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-211-0313', 36, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-766-1226', 37, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-842-3032', 38, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-608-8093', 39, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-717-1465', 40, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-715-8303', 41, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-493-9985', 42, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-174-4095', 43, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-976-4866', 44, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-291-5655', 45, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-700-3042', 46, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-526-1322', 47, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-753-8152', 48, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-183-3753', 49, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-477-3373', 50, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-190-5940', 51, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-174-9041', 52, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-565-6563', 53, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-917-5355', 54, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-770-5681', 55, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-303-3934', 56, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-309-4758', 57, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-626-7293', 58, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-624-9892', 59, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-437-0057', 60, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-415-4526', 61, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-163-1576', 62, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-345-2202', 63, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-432-3420', 64, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-659-0414', 65, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-978-2645', 66, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-105-5125', 67, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-952-5774', 68, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-604-6230', 69, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-718-3599', 70, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-447-5742', 71, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-416-8393', 72, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-589-8566', 73, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-776-4725', 74, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-410-3894', 75, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-696-3589', 76, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-884-4014', 77, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-295-7318', 78, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-319-7665', 79, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-655-4739', 80, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-407-7342', 81, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-158-1756', 82, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-239-0588', 83, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-805-5837', 84, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-772-5832', 85, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-822-5984', 86, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-176-3569', 87, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-583-2330', 88, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-474-0532', 89, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-362-7216', 90, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-651-2856', 91, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-298-8700', 92, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-569-8124', 93, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-354-9685', 94, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-708-7383', 95, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-070-5233', 96, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-239-4851', 97, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-052-7674', 98, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-723-3347', 99, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-975-9004', 100, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-102-0416', 101, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-969-1939', 102, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-689-4058', 103, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-885-0779', 104, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-810-3124', 105, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-027-7237', 106, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-612-5674', 107, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-772-6542', 108, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-983-7055', 109, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-406-0734', 110, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-603-4227', 111, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-302-7710', 112, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-379-1234', 113, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-032-5634', 114, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-403-2941', 115, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-738-6130', 116, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-041-2500', 117, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-008-8968', 118, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-209-7962', 119, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-574-1288', 120, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-648-5561', 121, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-419-5106', 122, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-344-4496', 123, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-906-3776', 124, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-487-6895', 125, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-865-6013', 126, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-124-6088', 127, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-961-7784', 128, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-931-5767', 129, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-303-8667', 130, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-144-4887', 131, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-713-8349', 132, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-223-5861', 133, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-771-6160', 134, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-003-8807', 135, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-166-1445', 136, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-297-8925', 137, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-893-5304', 138, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-818-8333', 139, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-259-2077', 140, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-647-3014', 141, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-827-4394', 142, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-989-2240', 143, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-770-1691', 144, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-088-1848', 145, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-587-7338', 146, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-465-9016', 147, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-391-0191', 148, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-281-0115', 149, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-537-8377', 150, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-397-8438', 151, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-973-7595', 152, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-183-6239', 153, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-074-5289', 154, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-383-8355', 155, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-911-3455', 156, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-094-9603', 157, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-133-4461', 158, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-206-4510', 159, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-289-5610', 160, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-326-7379', 161, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-015-3996', 162, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-901-2500', 163, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-858-8284', 164, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-006-9188', 165, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-112-4410', 166, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-113-5281', 167, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-317-4853', 168, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-173-0874', 169, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-622-7561', 170, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-614-3368', 171, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-242-4909', 172, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-513-3900', 173, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-240-1786', 174, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-923-6590', 175, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-187-6670', 176, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-495-9938', 177, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-642-2318', 178, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-543-9602', 179, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-103-9897', 180, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-499-9184', 181, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-716-2734', 182, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-922-3621', 183, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-259-4286', 184, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-375-7328', 185, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-995-7084', 186, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-655-0484', 187, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-201-9220', 188, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-683-2191', 189, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-075-9851', 190, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-522-9974', 191, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-711-5029', 192, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-759-7290', 193, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-494-1826', 194, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-608-1476', 195, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-580-2179', 196, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-043-5125', 197, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-841-8232', 198, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-771-8004', 199, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-360-9080', 200, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-488-2239', 201, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-407-1495', 202, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-468-9530', 203, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-597-5623', 204, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-715-7124', 205, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-096-1198', 206, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-053-2644', 207, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-618-3760', 208, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-430-1971', 209, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-311-0068', 210, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-339-1450', 211, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-119-8601', 212, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-020-1243', 213, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-421-3645', 214, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-070-1102', 215, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-355-7012', 216, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-328-2822', 217, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-554-5449', 218, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-237-0366', 219, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-329-8775', 220, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-454-9183', 221, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-222-7478', 222, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-628-5420', 223, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-923-4542', 224, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-009-5170', 225, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-322-4652', 226, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-400-3231', 227, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-098-6474', 228, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-486-1129', 229, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-536-3966', 230, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-279-4144', 231, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-801-5823', 232, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-118-5857', 233, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-336-0817', 234, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-861-7620', 235, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-683-5685', 236, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-888-9873', 237, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-848-7644', 238, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-837-3893', 239, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-806-3299', 240, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-632-4833', 241, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-801-0249', 242, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-022-0072', 243, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-943-2562', 244, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-882-0404', 245, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-060-3903', 246, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-373-2609', 247, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-475-2083', 248, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-465-4388', 249, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-080-6523', 250, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-217-5239', 251, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-747-9698', 252, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-122-4854', 253, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-810-1397', 254, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-092-6957', 255, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-335-3803', 256, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-569-1342', 257, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-876-2041', 258, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-061-8856', 259, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-264-4297', 260, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-690-8284', 261, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-277-9804', 262, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-096-2719', 263, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-973-7924', 264, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-235-6761', 265, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-302-1979', 266, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-675-0335', 267, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-629-5575', 268, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-692-1301', 269, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-967-5606', 270, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-445-7439', 271, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-917-6440', 272, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-867-2642', 273, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-257-6501', 274, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-231-6165', 275, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-963-9480', 276, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-083-0352', 277, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-682-2309', 278, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-410-9470', 279, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-007-4860', 280, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-313-5215', 281, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-073-2302', 282, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-080-1339', 283, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-738-9685', 284, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-359-5424', 285, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-595-0509', 286, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-952-3965', 287, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-071-5909', 288, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-033-8631', 289, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-878-7643', 290, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-382-1540', 291, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-046-3833', 292, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-275-3929', 293, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-645-4748', 294, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-272-9993', 295, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-127-1135', 296, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-286-9290', 297, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-787-9368', 298, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-432-8983', 299, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-817-8683', 300, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-427-4912', 301, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-091-2362', 302, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-003-0676', 303, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-918-6673', 304, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-172-4763', 305, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-764-1590', 306, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-336-0530', 307, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-406-8377', 308, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-866-1364', 309, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-798-5176', 310, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-213-7489', 311, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-591-4237', 312, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-314-3373', 313, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-832-1074', 314, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-385-8574', 315, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-854-7996', 316, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-204-9637', 317, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-418-4804', 318, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-830-9228', 319, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-362-1646', 320, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-234-8597', 321, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-473-4204', 322, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-007-2738', 323, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-742-5110', 324, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-397-0569', 325, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-000-6497', 326, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-468-0303', 327, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-201-4683', 328, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-972-5480', 329, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-125-3217', 330, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-887-1806', 331, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-799-8071', 332, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-365-2745', 333, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-746-2470', 334, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-810-8961', 335, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-317-8128', 336, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-516-3034', 337, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-354-3566', 338, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-396-9933', 339, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-032-6200', 340, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-011-4693', 341, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-349-7635', 342, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-642-0826', 343, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-815-4520', 344, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-412-6407', 345, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-135-0963', 346, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-142-8223', 347, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-719-9931', 348, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-430-1526', 349, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-344-5765', 350, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-477-0753', 351, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-930-8327', 352, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-762-5276', 353, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-189-1826', 354, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-907-0064', 355, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-030-8007', 356, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-810-7964', 357, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-072-8148', 358, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-998-0265', 359, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-793-6658', 360, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-338-2949', 361, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-067-8767', 362, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-353-7715', 363, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-282-4561', 364, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-510-8994', 365, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-365-2214', 366, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-837-8946', 367, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-028-6405', 368, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-237-1874', 369, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-921-5799', 370, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-029-4390', 371, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-923-7720', 372, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-671-3775', 373, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-570-0821', 374, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-535-6880', 375, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-152-2836', 376, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-227-4877', 377, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-915-9219', 378, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-528-8778', 379, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-367-3650', 380, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-567-6613', 381, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-308-5733', 382, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-439-3565', 383, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-756-1791', 384, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-042-0252', 385, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-893-3007', 386, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-066-2833', 387, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-144-3751', 388, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-583-1221', 389, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-228-4447', 390, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-031-9121', 391, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-462-4379', 392, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-868-2289', 393, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-760-3136', 394, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-834-3019', 395, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-214-5815', 396, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-025-2566', 397, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-022-0227', 398, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-448-6305', 399, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-117-6380', 400, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-948-1637', 401, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-891-2899', 402, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-499-4537', 403, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-643-6171', 404, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-975-3611', 405, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-098-7005', 406, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-154-8094', 407, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-673-0831', 408, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-687-8656', 409, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-900-8779', 410, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-981-7925', 411, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-586-8896', 412, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-391-9946', 413, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-338-2020', 414, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-590-4059', 415, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-105-8425', 416, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-406-0876', 417, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-927-3215', 418, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-718-4617', 419, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-321-5070', 420, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-307-8208', 421, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-884-2086', 422, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-221-3273', 423, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-047-7451', 424, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-783-8564', 425, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-504-7102', 426, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-673-8136', 427, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-778-3055', 428, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-554-1887', 429, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-133-4906', 430, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-098-8723', 431, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-093-9502', 432, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-669-1917', 433, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-578-0076', 434, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-311-4591', 435, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-448-0232', 436, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-568-9192', 437, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-030-3485', 438, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-116-7451', 439, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-353-6714', 440, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-071-7999', 441, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-355-9064', 442, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-879-7936', 443, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-487-3446', 444, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-599-8092', 445, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-728-3637', 446, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-095-3924', 447, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-768-9504', 448, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-652-7407', 449, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-534-0162', 450, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-017-1061', 451, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-830-3099', 452, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-453-9879', 453, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-423-4433', 454, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-809-9815', 455, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-406-8276', 456, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-610-3296', 457, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-067-8643', 458, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-574-1534', 459, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-601-3868', 460, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-438-0410', 461, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-168-9944', 462, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-092-6093', 463, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-215-6407', 464, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-099-1382', 465, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-653-6015', 466, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-615-6775', 467, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-847-0593', 468, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-415-8527', 469, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-986-5761', 470, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-333-5153', 471, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-343-5991', 472, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-126-7283', 473, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-874-4679', 474, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-820-9147', 475, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-425-1553', 476, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-063-1562', 477, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-962-6302', 478, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-839-8076', 479, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-817-9960', 480, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-955-6835', 481, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-455-8548', 482, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-097-5696', 483, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-858-4711', 484, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-954-1572', 485, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-800-2622', 486, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-465-6722', 487, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-255-1259', 488, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-828-3546', 489, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-120-6339', 490, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-117-6195', 491, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-042-1529', 492, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-313-0147', 493, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-592-9298', 494, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-677-8699', 495, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-284-1227', 496, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-359-3603', 497, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-876-3431', 498, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-037-1434', 499, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-719-8524', 500, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-683-9199', 501, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-407-3030', 502, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-545-4077', 503, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-466-7204', 504, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-222-4068', 505, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-531-9057', 506, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-311-0088', 507, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-174-7219', 508, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-036-9368', 509, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-970-2192', 510, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-906-3927', 511, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-583-8725', 512, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-065-4066', 513, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-660-3600', 514, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-544-4358', 515, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-330-3967', 516, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-660-8952', 517, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-810-6997', 518, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-271-8612', 519, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-568-7413', 520, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-766-3929', 521, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-947-6189', 522, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-406-4716', 523, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-018-6999', 524, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-389-7110', 525, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-422-0473', 526, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-547-8025', 527, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-410-2941', 528, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-201-5660', 529, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-323-9292', 530, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-734-1837', 531, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-896-8831', 532, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-016-1115', 533, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-245-4904', 534, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-347-4822', 535, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-762-8075', 536, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-257-3013', 537, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-983-9681', 538, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-057-8879', 539, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-034-3895', 540, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-613-5185', 541, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-774-0633', 542, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-513-4906', 543, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-233-5859', 544, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-393-0340', 545, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-610-3315', 546, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-348-1774', 547, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-981-7800', 548, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-569-0243', 549, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-591-2387', 550, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-328-0634', 551, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-416-2268', 552, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-267-0053', 553, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-892-2283', 554, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-516-8747', 555, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-215-6363', 556, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-764-3565', 557, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-152-1217', 558, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-461-7081', 559, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-248-8640', 560, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-468-7367', 561, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-576-7515', 562, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-644-8208', 563, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-191-9421', 564, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-075-3737', 565, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-322-1707', 566, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-362-9508', 567, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-423-2672', 568, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-665-5450', 569, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-594-3075', 570, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-651-0330', 571, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-042-0833', 572, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-772-8615', 573, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-087-1189', 574, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-315-3087', 575, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-873-1796', 576, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-575-6575', 577, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-977-6808', 578, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-720-4620', 579, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-785-7003', 580, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-494-8577', 581, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-810-2751', 582, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-939-9737', 583, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-065-4074', 584, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-111-6484', 585, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-516-1188', 586, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-697-0004', 587, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-419-7598', 588, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-454-1038', 589, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-052-9306', 590, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-721-0634', 591, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-254-2604', 592, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-208-1988', 593, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-957-9726', 594, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-801-6320', 595, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-413-3244', 596, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-334-6764', 597, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-771-8107', 598, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-591-1628', 599, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-643-8109', 600, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-591-8606', 601, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-650-5241', 602, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-494-4834', 603, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-752-9339', 604, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-696-2893', 605, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-065-8560', 606, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-527-9346', 607, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-309-1545', 608, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-815-8812', 609, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-338-8204', 610, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-147-6938', 611, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-234-7443', 612, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-305-4051', 613, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-712-7977', 614, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-814-4135', 615, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-683-5332', 616, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-346-1080', 617, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-746-2597', 618, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-613-5502', 619, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-797-8124', 620, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-938-5779', 621, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-764-9422', 622, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-870-5512', 623, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-251-3919', 624, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-666-7865', 625, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-858-8583', 626, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-855-1905', 627, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-167-6003', 628, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-747-8275', 629, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-997-2768', 630, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-650-1626', 631, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-624-4336', 632, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-511-6543', 633, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-266-0789', 634, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-227-5174', 635, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-482-5144', 636, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-069-3477', 637, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-643-2931', 638, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-929-9143', 639, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-123-2100', 640, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-913-4279', 641, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-933-5264', 642, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-364-2231', 643, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-027-7124', 644, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-482-0219', 645, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-940-0539', 646, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-265-0833', 647, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-469-5334', 648, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-833-4351', 649, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-460-5622', 650, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-886-7602', 651, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-182-4165', 652, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-553-8780', 653, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-889-1258', 654, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-896-8951', 655, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-427-2048', 656, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-945-0685', 657, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-301-7557', 658, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-613-6245', 659, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-774-7863', 660, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-736-8204', 661, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-923-5916', 662, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-695-3039', 663, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-811-3189', 664, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-721-3619', 665, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-295-8582', 666, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-576-9964', 667, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-554-0928', 668, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-057-4362', 669, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-807-5412', 670, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-373-0598', 671, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-224-7432', 672, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-172-2050', 673, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-022-8461', 674, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-431-6625', 675, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-310-2933', 676, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-379-7172', 677, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-398-3090', 678, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-353-7732', 679, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-969-5203', 680, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-100-8368', 681, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-334-8530', 682, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-935-9800', 683, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-651-9485', 684, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-858-5780', 685, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-300-8445', 686, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-674-3449', 687, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-007-6597', 688, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-709-6678', 689, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-831-3177', 690, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-023-8845', 691, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-221-9333', 692, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-166-9373', 693, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-060-0555', 694, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-890-8071', 695, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-070-8929', 696, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-571-4335', 697, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-573-1659', 698, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-006-3353', 699, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-789-0942', 700, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-343-0602', 701, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-277-6765', 702, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-944-7664', 703, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-880-2241', 704, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-607-5536', 705, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-732-8358', 706, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-240-1578', 707, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-878-1119', 708, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-971-2073', 709, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-996-7453', 710, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-660-2881', 711, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-995-7556', 712, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-689-5300', 713, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-841-7381', 714, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-142-6631', 715, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-577-2254', 716, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-953-8173', 717, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-327-9607', 718, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-334-9053', 719, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-130-0323', 720, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-929-7924', 721, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-446-3000', 722, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-427-9266', 723, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-600-5465', 724, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-219-0601', 725, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-058-4853', 726, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-294-1865', 727, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-718-7968', 728, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-875-6427', 729, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-860-5537', 730, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-019-7078', 731, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-736-7122', 732, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-853-0320', 733, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-767-7297', 734, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-357-5349', 735, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-824-2773', 736, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-488-9491', 737, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-476-0012', 738, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-976-8283', 739, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-653-8469', 740, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-279-4968', 741, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-864-4464', 742, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-429-6137', 743, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-434-9188', 744, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-778-1525', 745, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-028-9893', 746, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-676-7362', 747, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-151-9896', 748, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-837-0958', 749, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-508-8380', 750, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-027-1981', 751, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-938-9463', 752, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-101-6677', 753, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-682-4951', 754, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-340-3745', 755, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-058-0123', 756, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-260-3908', 757, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-609-5413', 758, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-847-3401', 759, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-303-6524', 760, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-353-1227', 761, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-789-1430', 762, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-045-0731', 763, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-510-4397', 764, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-469-3512', 765, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-946-4993', 766, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-223-7480', 767, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-918-8542', 768, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-698-8889', 769, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-677-5916', 770, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-973-8385', 771, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-687-3909', 772, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-436-0026', 773, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-815-8698', 774, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-933-8944', 775, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-466-9477', 776, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-825-2129', 777, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-135-6065', 778, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-718-4262', 779, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-875-1278', 780, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-628-9762', 781, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-710-4552', 782, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-114-4421', 783, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-134-2369', 784, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-062-4211', 785, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-210-8890', 786, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-742-6076', 787, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-046-4194', 788, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-192-2114', 789, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-815-3464', 790, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-639-9714', 791, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-080-4288', 792, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-596-7734', 793, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-764-0990', 794, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-585-1600', 795, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-884-8526', 796, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-271-8483', 797, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-646-2168', 798, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-540-0390', 799, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-996-3711', 800, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-785-5586', 801, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-253-4003', 802, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-808-7864', 803, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-985-3647', 804, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-326-7845', 805, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-016-3861', 806, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-212-4731', 807, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-661-9856', 808, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-858-9297', 809, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-982-6151', 810, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-220-8774', 811, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-975-7856', 812, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-227-8359', 813, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-178-8886', 814, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-819-1415', 815, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-235-7365', 816, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-901-2101', 817, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-019-4512', 818, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-114-3496', 819, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-502-2006', 820, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-152-8492', 821, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-592-5249', 822, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-646-3544', 823, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-489-5690', 824, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-437-2664', 825, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-705-8920', 826, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-807-1112', 827, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-294-8700', 828, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-204-0467', 829, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-991-9281', 830, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-649-7920', 831, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-770-7291', 832, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-241-3880', 833, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-726-6154', 834, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-868-9692', 835, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-144-3605', 836, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-439-9093', 837, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-377-8679', 838, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-991-3336', 839, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-415-1945', 840, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-973-2708', 841, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-064-0148', 842, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-145-7951', 843, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-123-0494', 844, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-413-7647', 845, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-293-6163', 846, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-488-5631', 847, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-525-3728', 848, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-378-3702', 849, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-865-6150', 850, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-503-3176', 851, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-087-7690', 852, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-838-5119', 853, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-620-3243', 854, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-099-1644', 855, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-113-8852', 856, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-927-5008', 857, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-461-8759', 858, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-838-3266', 859, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-555-4178', 860, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-778-2513', 861, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-211-8666', 862, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-030-8363', 863, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-041-7801', 864, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-300-4156', 865, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-989-3110', 866, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-084-9374', 867, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-969-7010', 868, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-759-0162', 869, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-477-0522', 870, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-153-0658', 871, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-551-3847', 872, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-026-9642', 873, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-095-3218', 874, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-722-9457', 875, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-700-3229', 876, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-622-2263', 877, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-418-9322', 878, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-088-3160', 879, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-421-3937', 880, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-711-5790', 881, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-251-4580', 882, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-140-4702', 883, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-533-3507', 884, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-267-7473', 885, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-830-7947', 886, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-652-6928', 887, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-896-6840', 888, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-433-1185', 889, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-551-5116', 890, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-912-8482', 891, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-211-9337', 892, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-659-1481', 893, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-645-6375', 894, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-353-4441', 895, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-312-2803', 896, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-351-9529', 897, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-719-8524', 898, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-073-5927', 899, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-117-9024', 900, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-079-1502', 901, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-701-4363', 902, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-900-0727', 903, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-247-7009', 904, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-422-5501', 905, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-707-8330', 906, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-256-2911', 907, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-215-1839', 908, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-565-2573', 909, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-345-0013', 910, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-985-7263', 911, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-540-0845', 912, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-404-8282', 913, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-932-1776', 914, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-156-7612', 915, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-371-2662', 916, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-782-2563', 917, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-550-3420', 918, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-606-6535', 919, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-702-3934', 920, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-643-7210', 921, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-013-9266', 922, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-561-3548', 923, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-000-6505', 924, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-422-0705', 925, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-334-6722', 926, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-443-3149', 927, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-075-6612', 928, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-268-9380', 929, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-111-0182', 930, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-408-5342', 931, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-267-5472', 932, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-516-5380', 933, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-887-7036', 934, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-905-6685', 935, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-641-9495', 936, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-658-1209', 937, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-105-0017', 938, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-767-7625', 939, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-143-2774', 940, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-405-0597', 941, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-519-4401', 942, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-277-9348', 943, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-784-6445', 944, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-595-2220', 945, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-775-1065', 946, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-631-7735', 947, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-723-6456', 948, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-260-9912', 949, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-393-7550', 950, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-009-0044', 951, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-705-7856', 952, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-496-7311', 953, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-141-8862', 954, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-275-5257', 955, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-371-9467', 956, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-509-6694', 957, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-573-7298', 958, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-020-2059', 959, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-335-7585', 960, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-802-3463', 961, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-736-7526', 962, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-478-6868', 963, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-412-4397', 964, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-246-1937', 965, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-235-2610', 966, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-240-0102', 967, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-941-3826', 968, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-265-9037', 969, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-937-5368', 970, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-944-8453', 971, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-232-7215', 972, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-689-7679', 973, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-318-9412', 974, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-512-8483', 975, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-147-7148', 976, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-403-8898', 977, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-717-7173', 978, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-988-7536', 979, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-125-4047', 980, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-352-6829', 981, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-901-0363', 982, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-200-6456', 983, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-517-3559', 984, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-444-1147', 985, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-433-9792', 986, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-059-0600', 987, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-745-0073', 988, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-112-8120', 989, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-705-9841', 990, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-733-9907', 991, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-729-8087', 992, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-293-0758', 993, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-189-0127', 994, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-773-0800', 995, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-015-1551', 996, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-167-8790', 997, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-242-9821', 998, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-357-6920', 999, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-360-0761', 1000, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-649-9506', 1, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-606-5201', 2, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-546-5564', 3, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-502-9441', 4, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-808-9617', 5, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-033-3900', 6, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-210-6311', 7, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-104-6315', 8, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-213-5709', 9, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-192-9487', 10, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-829-0674', 11, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-195-3334', 12, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-241-5685', 13, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-902-7869', 14, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-859-4165', 15, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-633-9423', 16, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-244-3189', 17, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-094-6703', 18, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-547-8103', 19, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-757-9128', 20, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-345-2510', 21, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-779-8730', 22, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-846-5144', 23, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-110-0052', 24, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-072-3248', 25, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-189-5995', 26, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-766-4552', 27, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-139-3745', 28, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-045-2045', 29, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-517-7736', 30, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-836-7264', 31, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-908-2070', 32, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-268-4786', 33, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-277-2586', 34, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-812-7278', 35, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-008-2256', 36, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-535-8504', 37, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-850-1294', 38, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-684-6200', 39, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-045-3982', 40, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-255-5957', 41, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-662-6660', 42, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-888-8782', 43, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-421-0302', 44, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-898-7230', 45, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-359-1705', 46, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-462-4310', 47, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-539-6777', 48, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-468-0552', 49, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-010-2172', 50, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-510-2077', 51, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-527-4232', 52, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-539-7622', 53, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-073-9981', 54, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-387-8145', 55, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-641-6995', 56, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-285-9119', 57, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-357-8791', 58, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-617-6650', 59, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-581-3401', 60, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-810-4717', 61, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-589-5735', 62, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-945-4007', 63, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-365-2383', 64, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-685-3379', 65, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-143-1114', 66, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-565-4375', 67, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-355-6017', 68, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-904-7786', 69, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-999-1601', 70, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-736-5401', 71, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-595-9838', 72, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-516-6863', 73, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-516-6875', 74, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-073-0632', 75, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-122-2011', 76, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-270-5754', 77, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-599-4350', 78, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-565-2552', 79, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-900-0380', 80, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-272-7261', 81, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-555-2975', 82, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-576-5818', 83, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-207-7503', 84, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-294-7498', 85, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-465-4602', 86, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-633-1491', 87, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-683-3394', 88, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-020-7428', 89, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-075-0902', 90, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-109-7433', 91, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-670-6949', 92, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-723-4047', 93, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-668-2978', 94, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-374-3567', 95, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-300-7359', 96, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-638-8607', 97, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-872-9393', 98, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-898-3692', 99, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-398-2310', 100, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-157-2900', 101, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-242-3216', 102, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-284-0227', 103, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-004-3469', 104, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-351-9735', 105, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-430-5975', 106, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-159-5765', 107, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-360-6659', 108, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-578-8950', 109, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-003-3241', 110, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-332-0561', 111, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-084-7908', 112, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-009-8888', 113, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-865-1029', 114, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-007-2806', 115, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-601-9815', 116, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-484-7453', 117, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-630-8156', 118, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-148-4010', 119, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-887-0799', 120, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-222-5731', 121, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-951-6978', 122, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-769-4800', 123, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-104-3627', 124, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-864-7281', 125, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-659-1455', 126, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-516-7328', 127, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-010-8685', 128, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-183-7220', 129, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-460-5802', 130, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-889-7452', 131, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-551-0370', 132, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-361-0519', 133, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-570-1333', 134, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-438-4705', 135, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-818-4706', 136, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-969-5159', 137, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-410-3287', 138, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-757-4107', 139, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-120-8127', 140, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-750-8264', 141, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-052-7176', 142, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-107-1075', 143, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-783-9493', 144, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-895-0534', 145, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-231-0331', 146, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-003-6401', 147, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-752-2313', 148, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-583-5365', 149, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-258-6497', 150, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-554-9899', 151, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-082-1361', 152, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-571-9180', 153, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-509-1008', 154, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-705-3642', 155, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-829-2219', 156, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-479-8137', 157, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-501-8531', 158, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-287-3097', 159, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-527-9092', 160, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-837-2578', 161, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-822-2062', 162, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-223-6685', 163, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-603-1352', 164, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-883-9305', 165, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-178-4419', 166, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-202-3741', 167, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-542-1422', 168, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-148-0276', 169, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-339-9183', 170, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-139-5732', 171, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-717-9313', 172, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-660-0989', 173, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-516-4376', 174, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-750-5924', 175, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-716-4119', 176, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-693-0607', 177, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-355-3508', 178, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-982-0024', 179, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-089-1657', 180, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-989-4075', 181, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-925-5004', 182, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-917-7408', 183, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-758-3161', 184, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-028-3649', 185, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-586-3186', 186, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-846-5526', 187, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-959-2125', 188, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-555-9974', 189, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-576-4005', 190, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-289-5962', 191, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-913-5799', 192, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-842-3496', 193, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-511-3845', 194, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-169-8496', 195, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-131-8126', 196, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-687-5740', 197, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-486-6259', 198, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-474-3168', 199, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-108-3427', 200, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-045-1200', 201, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-796-8420', 202, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-712-6503', 203, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-462-1007', 204, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-115-5214', 205, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-175-0366', 206, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-379-6435', 207, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-645-1005', 208, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-167-9469', 209, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-711-3683', 210, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-952-6051', 211, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-887-0889', 212, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-098-3603', 213, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-017-9821', 214, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-089-7989', 215, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-794-2536', 216, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-323-8644', 217, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-190-8364', 218, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-651-2048', 219, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-595-5132', 220, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-242-6109', 221, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-158-8044', 222, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-678-7147', 223, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-631-5536', 224, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-749-1282', 225, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-323-3355', 226, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-786-4346', 227, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-316-1610', 228, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-005-5541', 229, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-713-1093', 230, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-049-2666', 231, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-359-7865', 232, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-480-4198', 233, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-304-0154', 234, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-472-2592', 235, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-080-5245', 236, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-486-8088', 237, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-826-5803', 238, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-324-1927', 239, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-291-4029', 240, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-576-6977', 241, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-997-9946', 242, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-829-0204', 243, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-597-4687', 244, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-738-0928', 245, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-153-9424', 246, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-292-5171', 247, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-458-7503', 248, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-792-2913', 249, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-906-4274', 250, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-598-9928', 251, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-007-7044', 252, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-413-9501', 253, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-920-2188', 254, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-688-2200', 255, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-935-8905', 256, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-633-5603', 257, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-145-5669', 258, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-277-1225', 259, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-299-5583', 260, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-040-4897', 261, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-141-2349', 262, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-035-9593', 263, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-530-5739', 264, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-985-8918', 265, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-095-9296', 266, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-730-5192', 267, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-926-0143', 268, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-136-1280', 269, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-399-6191', 270, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-111-8286', 271, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-067-6646', 272, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-467-6914', 273, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-400-6810', 274, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-971-8793', 275, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-136-7887', 276, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-889-4511', 277, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-658-1859', 278, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-761-6675', 279, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-813-7558', 280, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-314-9810', 281, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-915-3010', 282, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-946-7855', 283, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-148-9784', 284, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-134-5314', 285, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-620-5362', 286, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-727-7383', 287, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-917-1322', 288, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-663-2544', 289, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-488-9514', 290, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-854-0609', 291, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-801-8319', 292, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-747-9783', 293, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-694-2592', 294, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-364-2981', 295, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-218-9161', 296, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-722-4121', 297, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-953-3270', 298, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-154-3195', 299, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-465-2804', 300, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-143-9098', 301, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-312-3600', 302, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-259-3462', 303, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-779-8319', 304, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-353-7440', 305, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-782-2664', 306, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-581-3210', 307, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-024-8156', 308, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-221-5208', 309, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-940-3001', 310, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-456-2692', 311, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-593-9846', 312, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-362-9978', 313, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-638-2496', 314, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-526-5238', 315, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-598-4291', 316, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-106-0535', 317, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-625-2133', 318, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-944-6310', 319, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-088-4444', 320, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-850-9834', 321, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-240-6439', 322, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-699-0921', 323, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-190-9230', 324, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-509-9792', 325, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-697-3808', 326, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-374-3965', 327, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-059-8397', 328, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-031-8539', 329, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-113-8767', 330, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-532-0922', 331, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-642-1883', 332, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-710-1299', 333, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-651-3628', 334, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-131-9692', 335, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-702-1201', 336, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-058-4701', 337, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-782-5717', 338, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-677-5742', 339, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-911-8010', 340, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-043-4335', 341, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-359-5975', 342, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-093-0704', 343, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-477-5899', 344, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-470-6813', 345, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-547-1525', 346, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-142-5444', 347, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-231-5212', 348, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-831-1979', 349, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-219-6753', 350, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-681-5051', 351, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-747-8769', 352, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-396-2816', 353, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-335-0361', 354, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-625-3077', 355, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-124-6362', 356, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-675-2044', 357, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-219-6975', 358, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-600-6548', 359, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-171-4258', 360, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-877-7715', 361, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-698-2868', 362, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-599-2778', 363, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-580-5949', 364, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-235-7437', 365, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-984-9814', 366, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-144-7306', 367, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-716-6691', 368, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-137-0079', 369, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-202-2093', 370, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-309-5055', 371, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-610-9836', 372, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-082-3485', 373, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-820-2226', 374, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-796-0935', 375, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-149-3982', 376, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-202-6268', 377, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-398-0913', 378, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-249-3587', 379, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-363-1108', 380, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-486-8851', 381, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-297-7377', 382, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-038-0422', 383, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-778-3088', 384, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-730-3629', 385, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-139-6390', 386, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-885-5760', 387, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-477-6775', 388, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-831-0735', 389, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-842-1870', 390, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-247-5989', 391, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-719-7842', 392, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-503-3725', 393, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-864-4166', 394, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-087-6470', 395, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-954-3833', 396, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-487-6548', 397, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-284-7991', 398, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-551-8434', 399, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-384-1180', 400, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-358-1326', 401, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-206-8609', 402, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-262-2815', 403, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-506-9167', 404, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-538-8454', 405, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-972-5489', 406, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-576-2196', 407, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-063-1522', 408, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-529-7469', 409, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-264-0438', 410, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-590-4212', 411, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-377-8668', 412, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-104-1657', 413, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-298-9889', 414, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-050-6594', 415, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-757-5131', 416, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-697-0230', 417, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-328-5237', 418, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-273-3427', 419, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-671-0802', 420, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-497-8230', 421, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-148-8602', 422, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-500-8214', 423, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-849-8020', 424, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-891-3450', 425, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-082-5587', 426, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-782-8285', 427, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-657-1477', 428, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-607-0049', 429, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-164-0028', 430, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-080-3920', 431, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-604-7056', 432, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-381-1786', 433, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-547-3219', 434, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-795-7075', 435, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-220-1986', 436, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-842-9306', 437, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-293-6444', 438, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-849-3783', 439, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-180-2338', 440, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-004-6656', 441, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-164-9965', 442, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-347-1149', 443, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-033-6846', 444, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-872-7925', 445, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-686-5558', 446, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-019-9351', 447, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-307-0124', 448, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-739-3841', 449, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-841-2851', 450, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-813-8577', 451, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-805-2487', 452, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-900-9402', 453, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-534-4489', 454, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-007-8580', 455, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-585-3075', 456, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-622-1174', 457, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-697-8635', 458, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-201-2518', 459, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-401-5123', 460, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-899-8074', 461, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-731-3475', 462, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-597-7348', 463, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-518-5059', 464, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-642-2297', 465, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-337-1340', 466, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-601-4828', 467, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-374-7319', 468, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-717-2114', 469, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-881-1146', 470, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-903-5107', 471, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-510-9676', 472, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-521-1603', 473, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-638-6637', 474, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-816-5799', 475, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-866-5443', 476, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-744-3229', 477, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-511-3199', 478, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-334-6215', 479, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-844-4638', 480, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-615-2145', 481, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-844-4516', 482, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-122-3445', 483, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-188-3007', 484, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-377-5042', 485, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-442-5972', 486, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-457-5792', 487, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-677-5718', 488, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-583-5480', 489, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-672-6848', 490, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-282-2046', 491, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-749-9383', 492, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-871-1182', 493, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-515-2417', 494, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-800-2010', 495, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-868-9204', 496, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-898-4285', 497, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-614-5135', 498, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('18-414-6409', 499, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-377-5778', 500, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-469-3892', 501, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-656-4455', 502, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-264-2845', 503, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-968-7949', 504, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-397-5611', 505, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-068-0958', 506, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-191-2122', 507, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-999-8614', 508, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-090-6329', 509, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-560-6200', 510, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-549-5293', 511, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-417-2308', 512, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-185-3370', 513, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-352-8739', 514, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-110-9814', 515, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-078-4426', 516, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-583-9190', 517, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-389-3547', 518, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-518-2996', 519, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-944-6892', 520, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-564-7403', 521, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-226-7342', 522, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-210-5562', 523, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-365-4105', 524, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-582-4136', 525, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-324-0186', 526, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-361-7352', 527, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-371-7225', 528, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-050-3409', 529, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-070-4780', 530, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-809-4645', 531, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-958-9360', 532, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-123-6334', 533, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-371-9820', 534, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-626-0963', 535, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-380-7597', 536, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-581-1642', 537, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-000-5294', 538, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-912-8229', 539, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-911-9779', 540, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-079-0179', 541, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-639-1124', 542, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-160-6705', 543, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-235-7163', 544, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-158-0108', 545, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-928-6491', 546, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-709-1473', 547, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-587-5385', 548, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-261-7332', 549, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-680-0034', 550, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-406-4766', 551, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('54-861-5586', 552, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-648-4119', 553, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-579-6323', 554, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-322-3883', 555, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-506-9384', 556, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-773-0495', 557, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-607-6730', 558, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-179-5133', 559, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-774-9187', 560, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-504-8497', 561, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-905-8973', 562, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-212-5754', 563, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-229-8761', 564, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-341-1050', 565, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-761-4775', 566, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-101-3388', 567, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-959-4359', 568, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-303-3474', 569, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-514-0471', 570, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-108-3000', 571, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-682-2688', 572, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-016-6832', 573, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-929-4458', 574, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-414-7671', 575, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-260-1341', 576, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-634-6624', 577, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-781-7458', 578, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-003-2556', 579, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-936-8531', 580, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-209-9220', 581, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-946-6388', 582, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-277-2495', 583, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-435-3448', 584, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-313-4641', 585, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-166-4717', 586, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-653-9642', 587, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-814-1931', 588, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-454-2935', 589, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-331-0103', 590, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-350-2582', 591, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-204-1581', 592, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-217-8817', 593, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-969-6090', 594, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-874-3604', 595, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-817-3659', 596, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-103-9096', 597, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-274-2798', 598, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-131-7548', 599, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-694-9495', 600, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-007-6999', 601, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-033-0116', 602, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-539-7368', 603, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-644-2056', 604, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-931-4223', 605, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-767-3322', 606, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-509-0785', 607, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-982-8731', 608, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-121-3394', 609, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-315-1299', 610, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-409-5921', 611, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-971-2299', 612, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-297-5387', 613, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-590-9468', 614, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-610-7758', 615, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-891-3382', 616, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-755-1052', 617, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-970-6566', 618, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-679-9705', 619, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-803-8163', 620, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-868-8976', 621, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('30-139-3994', 622, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-427-9788', 623, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('92-932-8053', 624, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-049-3977', 625, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-679-5450', 626, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-638-3701', 627, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-293-9772', 628, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-420-4307', 629, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-856-7741', 630, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-820-6818', 631, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-789-6541', 632, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-054-3493', 633, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-137-0869', 634, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-703-3980', 635, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-350-8925', 636, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-649-7215', 637, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-957-3251', 638, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-519-5219', 639, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-512-3144', 640, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-407-9519', 641, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-729-6085', 642, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-269-7380', 643, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-597-5653', 644, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-138-7622', 645, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-959-8588', 646, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-688-5840', 647, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-881-0841', 648, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-934-5348', 649, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('46-135-0768', 650, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-095-8416', 651, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-847-1378', 652, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-839-7181', 653, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-734-8057', 654, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-632-5205', 655, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-994-9360', 656, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-940-5785', 657, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('48-481-7404', 658, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-714-6792', 659, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-228-3312', 660, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-370-0899', 661, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-559-8770', 662, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-800-1121', 663, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-001-8160', 664, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-230-4323', 665, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-188-3172', 666, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-561-4427', 667, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-924-8330', 668, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-473-6651', 669, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-102-5068', 670, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-047-1453', 671, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-640-2535', 672, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-385-3826', 673, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-818-4241', 674, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-353-7539', 675, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-325-1783', 676, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-030-7846', 677, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-707-9160', 678, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-890-5130', 679, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-959-4889', 680, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-669-1832', 681, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-225-8586', 682, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('65-071-1428', 683, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-723-7217', 684, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('72-428-3943', 685, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-132-2384', 686, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-355-4771', 687, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-013-4023', 688, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-736-7540', 689, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-258-9328', 690, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-073-6787', 691, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-870-7112', 692, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-303-6241', 693, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-469-1284', 694, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-097-7207', 695, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-475-3254', 696, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-270-5078', 697, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-705-2209', 698, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-694-3692', 699, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-983-8061', 700, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-081-1161', 701, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-580-8889', 702, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-842-5866', 703, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-567-4080', 704, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-048-8894', 705, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('49-064-6826', 706, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-799-3640', 707, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-562-8797', 708, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-450-9409', 709, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-628-1929', 710, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-281-1851', 711, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('12-900-4007', 712, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-872-0255', 713, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-045-1887', 714, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-090-1984', 715, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-241-9102', 716, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-317-7585', 717, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-969-2043', 718, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-103-5698', 719, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-337-8038', 720, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-210-0973', 721, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-332-5647', 722, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-010-6444', 723, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-036-9627', 724, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-006-5834', 725, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-862-2282', 726, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-869-2405', 727, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-621-9516', 728, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('29-645-3919', 729, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-207-9984', 730, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-390-5500', 731, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-688-8682', 732, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-879-4797', 733, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-932-1293', 734, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-284-5419', 735, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-780-5179', 736, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('41-131-7736', 737, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-980-5198', 738, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-753-4503', 739, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-765-7347', 740, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-277-2622', 741, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-936-8673', 742, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-046-4820', 743, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-052-9387', 744, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-476-1460', 745, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-318-1874', 746, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-574-5055', 747, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-939-5768', 748, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('67-718-8045', 749, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-638-2807', 750, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('55-399-3672', 751, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-099-4123', 752, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-039-7345', 753, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-250-1506', 754, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-362-9856', 755, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-499-3944', 756, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-633-2800', 757, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-951-0900', 758, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-541-5052', 759, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-697-7017', 760, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-164-4513', 761, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-471-4002', 762, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-016-6718', 763, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-418-3136', 764, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-723-4145', 765, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-286-8519', 766, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-326-9666', 767, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-288-3272', 768, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-711-5246', 769, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-323-7701', 770, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-710-1439', 771, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-724-4649', 772, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('38-566-0575', 773, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-743-6779', 774, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-403-1342', 775, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-759-9647', 776, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-412-8859', 777, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-421-0495', 778, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-591-0017', 779, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-595-1409', 780, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-040-3173', 781, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-375-2784', 782, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('53-493-0986', 783, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-366-3382', 784, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-817-0079', 785, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-672-1030', 786, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-315-7361', 787, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-964-4929', 788, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-633-5972', 789, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-906-0476', 790, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-475-7664', 791, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-684-0187', 792, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-155-8648', 793, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-232-5539', 794, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-881-1339', 795, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('37-044-2122', 796, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-724-8336', 797, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('83-135-2275', 798, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-765-7615', 799, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-981-7572', 800, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-261-7314', 801, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-337-7213', 802, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-174-9857', 803, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-161-3719', 804, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-182-4593', 805, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-133-2943', 806, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-163-0366', 807, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-578-8061', 808, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('66-125-9728', 809, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-811-2903', 810, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-579-3387', 811, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-017-6618', 812, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-878-8105', 813, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-896-4881', 814, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-414-7308', 815, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-754-1774', 816, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-195-6491', 817, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('50-318-0896', 818, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-829-7985', 819, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-211-8551', 820, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-810-7116', 821, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-329-8832', 822, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-910-7002', 823, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-324-3102', 824, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-471-3493', 825, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-568-2361', 826, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-265-9843', 827, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-982-8843', 828, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-452-2813', 829, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-550-1654', 830, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-923-0775', 831, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-113-3029', 832, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-202-1614', 833, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-694-0399', 834, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-373-2198', 835, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-623-5172', 836, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-248-7918', 837, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('98-677-4066', 838, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-272-1912', 839, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('52-721-4500', 840, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-781-5208', 841, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('26-648-1946', 842, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-884-3166', 843, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-436-0496', 844, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-393-8568', 845, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-504-8429', 846, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-279-8860', 847, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-689-9995', 848, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-759-5863', 849, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-788-4237', 850, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('36-664-5992', 851, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('01-004-8760', 852, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-052-4637', 853, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('78-229-0654', 854, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('51-710-6905', 855, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('27-228-3132', 856, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-956-8917', 857, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-438-4568', 858, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-913-2303', 859, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-056-2025', 860, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-792-8887', 861, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-047-2709', 862, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-731-0725', 863, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-821-0560', 864, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-431-9892', 865, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-065-0432', 866, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('06-555-5337', 867, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-760-4535', 868, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-686-4360', 869, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('63-154-9436', 870, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-573-0926', 871, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-028-1094', 872, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-838-5078', 873, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('87-356-5319', 874, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('71-918-4638', 875, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-575-7380', 876, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-646-0965', 877, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-994-4308', 878, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('89-976-7010', 879, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('11-253-4274', 880, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-376-8715', 881, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-364-3247', 882, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-837-3148', 883, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('76-239-0269', 884, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-143-4116', 885, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('70-772-4045', 886, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('75-366-5248', 887, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-898-4605', 888, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-199-4004', 889, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-615-5149', 890, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-655-2981', 891, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-251-8031', 892, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-306-8061', 893, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('32-724-9994', 894, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-426-4829', 895, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-594-3787', 896, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-660-6425', 897, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('08-703-7959', 898, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-331-1900', 899, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-613-3399', 900, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-809-2255', 901, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('07-049-5107', 902, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('77-391-0415', 903, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-586-3739', 904, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-244-0469', 905, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-147-8907', 906, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-004-5380', 907, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('99-619-4476', 908, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-534-8838', 909, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-423-1508', 910, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-978-8414', 911, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('74-294-9650', 912, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('14-396-9339', 913, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('25-534-8035', 914, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('62-785-7867', 915, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('82-951-3856', 916, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-893-5378', 917, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-260-3539', 918, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-585-5314', 919, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('15-584-4914', 920, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('90-379-4600', 921, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-500-6315', 922, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('56-989-9633', 923, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('91-906-8261', 924, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('64-387-4881', 925, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-987-7847', 926, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-220-6894', 927, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-604-0049', 928, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('58-756-4808', 929, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-839-7227', 930, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('69-624-8670', 931, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-890-7589', 932, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-810-2332', 933, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-257-0355', 934, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-245-6870', 935, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-474-6174', 936, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('57-968-3240', 937, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('00-509-5718', 938, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('09-937-0605', 939, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-904-0512', 940, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('17-693-1692', 941, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-400-0976', 942, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-992-8414', 943, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('73-037-0955', 944, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('47-869-0336', 945, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('34-115-9659', 946, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('85-716-6065', 947, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-989-4526', 948, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-182-2260', 949, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('33-916-7866', 950, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-532-3669', 951, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-937-9775', 952, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-590-7946', 953, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-014-8580', 954, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('95-319-5062', 955, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('24-418-1543', 956, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('43-618-5029', 957, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('35-615-6767', 958, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('40-721-9412', 959, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-080-1076', 960, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('22-434-8733', 961, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('16-963-0249', 962, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-257-7570', 963, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-360-8850', 964, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('97-954-6563', 965, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('84-078-8093', 966, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('31-224-7138', 967, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('79-306-3864', 968, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('21-827-2127', 969, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('19-598-6248', 970, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-319-3831', 971, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('94-691-3231', 972, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('68-251-1587', 973, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('23-791-6489', 974, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('60-078-1585', 975, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('13-716-5590', 976, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('96-649-6112', 977, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-076-6040', 978, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('86-382-5987', 979, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('61-294-5961', 980, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('80-197-7633', 981, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('88-822-3253', 982, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('04-096-7216', 983, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('02-402-4389', 984, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-910-2484', 985, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('39-665-4696', 986, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('59-182-1634', 987, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('10-282-6837', 988, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-187-1634', 989, 'Bicycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('05-056-1816', 990, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-419-9618', 991, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('28-116-7901', 992, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('44-913-2097', 993, 'Car', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('93-310-4702', 994, 'Motorcycle', true);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-604-6860', 995, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('81-177-0363', 996, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('03-626-2073', 997, 'Bicycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('45-240-2585', 998, 'Motorcycle', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('42-673-4394', 999, 'Car', false);
-insert into studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical) values ('20-550-9158', 1000, 'Bicycle', true);
+) ;
+INSERT INTO studentbooklesson (Student_Id, Lesson_Id, vehicle_type, Passed_Theoretical)
+VALUES
+  (1, 1, 'truck', true) ,
+  (2, 2, 'car', true) ,
+  (3, 3, 'truck', false) ,
+  (4, 4, 'van', true) ,
+  (5, 5, 'truck', false) ,
+  (6, 6, 'car', false) ,
+  (7, 7, 'van', false) ,
+  (8, 8, 'car', false) ,
+  (9, 9, 'car', true) ,
+  (10, 10, 'truck', false) ,
+  (11, 11, 'truck', true) ,
+  (12, 12, 'van', true) ,
+  (13, 13, 'van', true) ,
+  (14, 14, 'car', true) ,
+  (15, 15, 'van', true) ,
+  (16, 16, 'truck', false) ,
+  (17, 17, 'van', false) ,
+  (18, 18, 'van', true) ,
+  (19, 19, 'truck', false) ,
+  (20, 20, 'van', true) ,
+  (21, 21, 'van', true) ,
+  (22, 22, 'truck', true) ,
+  (23, 23, 'van', true) ,
+  (24, 24, 'truck', false) ,
+  (25, 25, 'truck', false) ,
+  (26, 26, 'truck', true) ,
+  (27, 27, 'car', false) ,
+  (28, 28, 'car', false) ,
+  (29, 29, 'car', false) ,
+  (30, 30, 'car', true) ,
+  (31, 31, 'car', true) ,
+  (32, 32, 'car', false) ,
+  (33, 33, 'van', true) ,
+  (34, 34, 'van', true) ,
+  (35, 35, 'truck', false) ,
+  (36, 36, 'van', true) ,
+  (37, 37, 'van', false) ,
+  (38, 38, 'car', true) ,
+  (39, 39, 'van', true) ,
+  (40, 40, 'truck', true) ,
+  (41, 41, 'truck', true) ,
+  (42, 42, 'van', true) ,
+  (43, 43, 'car', true) ,
+  (44, 44, 'truck', true) ,
+  (45, 45, 'car', false) ,
+  (46, 46, 'van', true) ,
+  (47, 47, 'truck', true) ,
+  (48, 48, 'truck', false) ,
+  (49, 49, 'car', true) ,
+  (50, 50, 'truck', true) ,
+  (51, 51, 'van', true) ,
+  (52, 52, 'van', true) ,
+  (53, 53, 'car', true) ,
+  (54, 54, 'car', true) ,
+  (55, 55, 'car', false) ,
+  (56, 56, 'van', true) ,
+  (57, 57, 'car', false) ,
+  (58, 58, 'car', true) ,
+  (59, 59, 'truck', true) ,
+  (60, 60, 'truck', true) ,
+  (61, 61, 'van', true) ,
+  (62, 62, 'truck', false) ,
+  (63, 63, 'van', false) ,
+  (64, 64, 'car', true) ,
+  (65, 65, 'truck', false) ,
+  (66, 66, 'truck', false) ,
+  (67, 67, 'car', true) ,
+  (68, 68, 'car', false) ,
+  (69, 69, 'car', false) ,
+  (70, 70, 'van', true) ,
+  (71, 71, 'car', true) ,
+  (72, 72, 'van', true) ,
+  (73, 73, 'van', false) ,
+  (74, 74, 'van', false) ,
+  (75, 75, 'van', false) ,
+  (76, 76, 'van', false) ,
+  (77, 77, 'truck', false) ,
+  (78, 78, 'van', false) ,
+  (79, 79, 'truck', true) ,
+  (80, 80, 'car', false) ,
+  (81, 81, 'van', false) ,
+  (82, 82, 'car', true) ,
+  (83, 83, 'car', true) ,
+  (84, 84, 'truck', true) ,
+  (85, 85, 'car', false) ,
+  (86, 86, 'van', false) ,
+  (87, 87, 'car', true) ,
+  (88, 88, 'van', false) ,
+  (89, 89, 'truck', true) ,
+  (90, 90, 'car', true) ,
+  (91, 91, 'car', true) ,
+  (92, 92, 'truck', true) ,
+  (93, 93, 'van', true) ,
+  (94, 94, 'van', true) ,
+  (95, 95, 'van', true) ,
+  (96, 96, 'car', true) ,
+  (97, 97, 'truck', false) ,
+  (98, 98, 'car', false) ,
+  (99, 99, 'truck', true) ,
+  (100, 100, 'van', false) ,
+  (101, 101, 'van', false) ,
+  (102, 102, 'car', false) ,
+  (103, 103, 'car', true) ,
+  (104, 104, 'car', false) ,
+  (105, 105, 'van', false) ,
+  (106, 106, 'van', false) ,
+  (107, 107, 'car', true) ,
+  (108, 108, 'truck', true) ,
+  (109, 109, 'car', true) ,
+  (110, 110, 'van', true) ,
+  (111, 111, 'van', true) ,
+  (112, 112, 'truck', true) ,
+  (113, 113, 'van', false) ,
+  (114, 114, 'van', true) ,
+  (115, 115, 'truck', false) ,
+  (116, 116, 'van', false) ,
+  (117, 117, 'truck', false) ,
+  (118, 118, 'truck', true) ,
+  (119, 119, 'van', false) ,
+  (120, 120, 'van', true) ,
+  (121, 121, 'car', true) ,
+  (122, 122, 'car', false) ,
+  (123, 123, 'car', false) ,
+  (124, 124, 'car', false) ,
+  (125, 125, 'truck', false) ,
+  (126, 126, 'van', false) ,
+  (127, 127, 'car', true) ,
+  (128, 128, 'van', false) ,
+  (129, 129, 'truck', true) ,
+  (130, 130, 'van', true) ,
+  (131, 131, 'truck', true) ,
+  (132, 132, 'van', false) ,
+  (133, 133, 'van', true) ,
+  (134, 134, 'truck', true) ,
+  (135, 135, 'car', false) ,
+  (136, 136, 'van', false) ,
+  (137, 137, 'car', false) ,
+  (138, 138, 'car', false) ,
+  (139, 139, 'van', true) ,
+  (140, 140, 'car', false) ,
+  (141, 141, 'truck', true) ,
+  (142, 142, 'truck', true) ,
+  (143, 143, 'van', false) ,
+  (144, 144, 'van', false) ,
+  (145, 145, 'van', false) ,
+  (146, 146, 'truck', true) ,
+  (147, 147, 'car', true) ,
+  (148, 148, 'car', false) ,
+  (149, 149, 'truck', true) ,
+  (150, 150, 'truck', true) ,
+  (151, 151, 'car', true) ,
+  (152, 152, 'truck', false) ,
+  (153, 153, 'truck', false) ,
+  (154, 154, 'truck', false) ,
+  (155, 155, 'van', false) ,
+  (156, 156, 'van', true) ,
+  (157, 157, 'van', false) ,
+  (158, 158, 'car', true) ,
+  (159, 159, 'van', false) ,
+  (160, 160, 'truck', false) ,
+  (161, 161, 'truck', false) ,
+  (162, 162, 'truck', true) ,
+  (163, 163, 'truck', false) ,
+  (164, 164, 'van', false) ,
+  (165, 165, 'car', true) ,
+  (166, 166, 'van', true) ,
+  (167, 167, 'truck', true) ,
+  (168, 168, 'truck', false) ,
+  (169, 169, 'truck', true) ,
+  (170, 170, 'car', true) ,
+  (171, 171, 'car', true) ,
+  (172, 172, 'van', false) ,
+  (173, 173, 'truck', false) ,
+  (174, 174, 'truck', false) ,
+  (175, 175, 'van', false) ,
+  (176, 176, 'van', true) ,
+  (177, 177, 'van', true) ,
+  (178, 178, 'car', false) ,
+  (179, 179, 'truck', false) ,
+  (180, 180, 'car', true) ,
+  (181, 181, 'car', false) ,
+  (182, 182, 'van', false) ,
+  (183, 183, 'van', true) ,
+  (184, 184, 'car', true) ,
+  (185, 185, 'car', true) ,
+  (186, 186, 'van', true) ,
+  (187, 187, 'car', false) ,
+  (188, 188, 'car', true) ,
+  (189, 189, 'car', false) ,
+  (190, 190, 'van', true) ,
+  (191, 191, 'truck', true) ,
+  (192, 192, 'car', true) ,
+  (193, 193, 'van', true) ,
+  (194, 194, 'van', false) ,
+  (195, 195, 'car', true) ,
+  (196, 196, 'car', false) ,
+  (197, 197, 'truck', true) ,
+  (198, 198, 'car', false) ,
+  (199, 199, 'car', true) ,
+  (200, 200, 'car', false) ,
+  (201, 201, 'truck', true) ,
+  (202, 202, 'truck', true) ,
+  (203, 203, 'van', false) ,
+  (204, 204, 'van', false) ,
+  (205, 205, 'truck', true) ,
+  (206, 206, 'truck', false) ,
+  (207, 207, 'van', true) ,
+  (208, 208, 'car', true) ,
+  (209, 209, 'car', false) ,
+  (210, 210, 'van', true) ,
+  (211, 211, 'truck', false) ,
+  (212, 212, 'van', false) ,
+  (213, 213, 'van', false) ,
+  (214, 214, 'truck', true) ,
+  (215, 215, 'truck', false) ,
+  (216, 216, 'van', true) ,
+  (217, 217, 'truck', false) ,
+  (218, 218, 'car', false) ,
+  (219, 219, 'car', true) ,
+  (220, 220, 'car', true) ,
+  (221, 221, 'car', false) ,
+  (222, 222, 'van', true) ,
+  (223, 223, 'van', false) ,
+  (224, 224, 'car', true) ,
+  (225, 225, 'car', true) ,
+  (226, 226, 'truck', true) ,
+  (227, 227, 'truck', true) ,
+  (228, 228, 'car', false) ,
+  (229, 229, 'van', true) ,
+  (230, 230, 'truck', true) ,
+  (231, 231, 'truck', true) ,
+  (232, 232, 'truck', false) ,
+  (233, 233, 'truck', false) ,
+  (234, 234, 'car', true) ,
+  (235, 235, 'truck', true) ,
+  (236, 236, 'truck', true) ,
+  (237, 237, 'truck', true) ,
+  (238, 238, 'truck', true) ,
+  (239, 239, 'car', false) ,
+  (240, 240, 'truck', true) ,
+  (241, 241, 'car', true) ,
+  (242, 242, 'car', true) ,
+  (243, 243, 'van', true) ,
+  (244, 244, 'truck', true) ,
+  (245, 245, 'van', false) ,
+  (246, 246, 'truck', false) ,
+  (247, 247, 'truck', false) ,
+  (248, 248, 'car', false) ,
+  (249, 249, 'van', false) ,
+  (250, 250, 'van', false) ,
+  (251, 251, 'truck', false) ,
+  (252, 252, 'car', false) ,
+  (253, 253, 'car', false) ,
+  (254, 254, 'car', true) ,
+  (255, 255, 'van', true) ,
+  (256, 256, 'van', false) ,
+  (257, 257, 'truck', true) ,
+  (258, 258, 'van', true) ,
+  (259, 259, 'car', true) ,
+  (260, 260, 'car', true) ,
+  (261, 261, 'truck', true) ,
+  (262, 262, 'van', true) ,
+  (263, 263, 'truck', false) ,
+  (264, 264, 'truck', true) ,
+  (265, 265, 'car', false) ,
+  (266, 266, 'truck', true) ,
+  (267, 267, 'van', true) ,
+  (268, 268, 'car', true) ,
+  (269, 269, 'car', false) ,
+  (270, 270, 'truck', false) ,
+  (271, 271, 'truck', false) ,
+  (272, 272, 'car', true) ,
+  (273, 273, 'van', false) ,
+  (274, 274, 'car', false) ,
+  (275, 275, 'van', true) ,
+  (276, 276, 'truck', true) ,
+  (277, 277, 'van', true) ,
+  (278, 278, 'truck', false) ,
+  (279, 279, 'van', true) ,
+  (280, 280, 'truck', false) ,
+  (281, 281, 'car', true) ,
+  (282, 282, 'car', true) ,
+  (283, 283, 'car', false) ,
+  (284, 284, 'truck', true) ,
+  (285, 285, 'car', true) ,
+  (286, 286, 'truck', false) ,
+  (287, 287, 'car', true) ,
+  (288, 288, 'car', true) ,
+  (289, 289, 'van', false) ,
+  (290, 290, 'truck', false) ,
+  (291, 291, 'car', false) ,
+  (292, 292, 'truck', true) ,
+  (293, 293, 'truck', false) ,
+  (294, 294, 'van', false) ,
+  (295, 295, 'truck', true) ,
+  (296, 296, 'van', true) ,
+  (297, 297, 'truck', false) ,
+  (298, 298, 'van', false) ,
+  (299, 299, 'truck', true) ,
+  (300, 300, 'truck', true) ,
+  (301, 301, 'truck', false) ,
+  (302, 302, 'car', false) ,
+  (303, 303, 'car', true) ,
+  (304, 304, 'car', true) ,
+  (305, 305, 'truck', true) ,
+  (306, 306, 'van', true) ,
+  (307, 307, 'car', false) ,
+  (308, 308, 'van', false) ,
+  (309, 309, 'truck', false) ,
+  (310, 310, 'car', true) ,
+  (311, 311, 'car', true) ,
+  (312, 312, 'car', false) ,
+  (313, 313, 'truck', false) ,
+  (314, 314, 'car', false) ,
+  (315, 315, 'truck', false) ,
+  (316, 316, 'van', true) ,
+  (317, 317, 'car', true) ,
+  (318, 318, 'car', false) ,
+  (319, 319, 'truck', false) ,
+  (320, 320, 'van', true) ,
+  (321, 321, 'car', true) ,
+  (322, 322, 'van', true) ,
+  (323, 323, 'car', true) ,
+  (324, 324, 'truck', false) ,
+  (325, 325, 'truck', false) ,
+  (326, 326, 'car', false) ,
+  (327, 327, 'truck', false) ,
+  (328, 328, 'van', true) ,
+  (329, 329, 'truck', true) ,
+  (330, 330, 'truck', false) ,
+  (331, 331, 'truck', true) ,
+  (332, 332, 'van', false) ,
+  (333, 333, 'truck', true) ,
+  (334, 334, 'car', false) ,
+  (335, 335, 'truck', true) ,
+  (336, 336, 'truck', false) ,
+  (337, 337, 'truck', true) ,
+  (338, 338, 'truck', false) ,
+  (339, 339, 'van', false) ,
+  (340, 340, 'van', true) ,
+  (341, 341, 'car', true) ,
+  (342, 342, 'van', true) ,
+  (343, 343, 'van', false) ,
+  (344, 344, 'truck', false) ,
+  (345, 345, 'car', false) ,
+  (346, 346, 'truck', false) ,
+  (347, 347, 'car', true) ,
+  (348, 348, 'car', true) ,
+  (349, 349, 'truck', true) ,
+  (350, 350, 'truck', false) ,
+  (351, 351, 'car', false) ,
+  (352, 352, 'car', true) ,
+  (353, 353, 'truck', false) ,
+  (354, 354, 'truck', true) ,
+  (355, 355, 'truck', false) ,
+  (356, 356, 'truck', false) ,
+  (357, 357, 'van', true) ,
+  (358, 358, 'car', false) ,
+  (359, 359, 'car', false) ,
+  (360, 360, 'car', false) ,
+  (361, 361, 'truck', true) ,
+  (362, 362, 'truck', true) ,
+  (363, 363, 'car', false) ,
+  (364, 364, 'car', true) ,
+  (365, 365, 'van', true) ,
+  (366, 366, 'truck', true) ,
+  (367, 367, 'car', false) ,
+  (368, 368, 'car', false) ,
+  (369, 369, 'car', false) ,
+  (370, 370, 'van', false) ,
+  (371, 371, 'car', true) ,
+  (372, 372, 'car', true) ,
+  (373, 373, 'van', true) ,
+  (374, 374, 'car', false) ,
+  (375, 375, 'van', true) ,
+  (376, 376, 'van', false) ,
+  (377, 377, 'van', true) ,
+  (378, 378, 'car', false) ,
+  (379, 379, 'truck', false) ,
+  (380, 380, 'van', false) ,
+  (381, 381, 'truck', false) ,
+  (382, 382, 'van', false) ,
+  (383, 383, 'truck', true) ,
+  (384, 384, 'van', false) ,
+  (385, 385, 'van', false) ,
+  (386, 386, 'van', false) ,
+  (387, 387, 'van', false) ,
+  (388, 388, 'van', true) ,
+  (389, 389, 'van', false) ,
+  (390, 390, 'car', true) ,
+  (391, 391, 'car', false) ,
+  (392, 392, 'van', true) ,
+  (393, 393, 'truck', true) ,
+  (394, 394, 'truck', false) ,
+  (395, 395, 'truck', false) ,
+  (396, 396, 'van', true) ,
+  (397, 397, 'van', false) ,
+  (398, 398, 'truck', false) ,
+  (399, 399, 'car', false) ,
+  (400, 400, 'truck', true) ,
+  (401, 401, 'car', true) ,
+  (402, 402, 'van', false) ,
+  (403, 403, 'van', true) ,
+  (404, 404, 'truck', false) ,
+  (405, 405, 'truck', false) ,
+  (406, 406, 'van', false) ,
+  (407, 407, 'truck', false) ,
+  (408, 408, 'truck', true) ,
+  (409, 409, 'car', true) ,
+  (410, 410, 'car', true) ,
+  (411, 411, 'car', false) ,
+  (412, 412, 'truck', true) ,
+  (413, 413, 'van', false) ,
+  (414, 414, 'van', false) ,
+  (415, 415, 'van', true) ,
+  (416, 416, 'truck', true) ,
+  (417, 417, 'van', false) ,
+  (418, 418, 'truck', true) ,
+  (419, 419, 'van', false) ,
+  (420, 420, 'van', true) ,
+  (421, 421, 'van', false) ,
+  (422, 422, 'car', false) ,
+  (423, 423, 'van', false) ,
+  (424, 424, 'car', true) ,
+  (425, 425, 'car', false) ,
+  (426, 426, 'car', true) ,
+  (427, 427, 'van', true) ,
+  (428, 428, 'car', true) ,
+  (429, 429, 'car', true) ,
+  (430, 430, 'truck', false) ,
+  (431, 431, 'car', false) ,
+  (432, 432, 'truck', false) ,
+  (433, 433, 'van', false) ,
+  (434, 434, 'van', false) ,
+  (435, 435, 'van', true) ,
+  (436, 436, 'car', false) ,
+  (437, 437, 'car', true) ,
+  (438, 438, 'van', false) ,
+  (439, 439, 'van', false) ,
+  (440, 440, 'truck', false) ,
+  (441, 441, 'car', false) ,
+  (442, 442, 'truck', false) ,
+  (443, 443, 'truck', true) ,
+  (444, 444, 'car', false) ,
+  (445, 445, 'car', false) ,
+  (446, 446, 'truck', true) ,
+  (447, 447, 'car', true) ,
+  (448, 448, 'truck', true) ,
+  (449, 449, 'truck', false) ,
+  (450, 450, 'car', false) ,
+  (451, 451, 'van', true) ,
+  (452, 452, 'van', true) ,
+  (453, 453, 'truck', false) ,
+  (454, 454, 'truck', true) ,
+  (455, 455, 'van', false) ,
+  (456, 456, 'truck', true) ,
+  (457, 457, 'car', false) ,
+  (458, 458, 'van', false) ,
+  (459, 459, 'truck', false) ,
+  (460, 460, 'car', false) ,
+  (461, 461, 'car', false) ,
+  (462, 462, 'car', false) ,
+  (463, 463, 'car', false) ,
+  (464, 464, 'truck', true) ,
+  (465, 465, 'van', false) ,
+  (466, 466, 'car', false) ,
+  (467, 467, 'truck', true) ,
+  (468, 468, 'car', true) ,
+  (469, 469, 'car', false) ,
+  (470, 470, 'car', true) ,
+  (471, 471, 'car', true) ,
+  (472, 472, 'car', true) ,
+  (473, 473, 'car', false) ,
+  (474, 474, 'car', false) ,
+  (475, 475, 'car', false) ,
+  (476, 476, 'van', false) ,
+  (477, 477, 'van', true) ,
+  (478, 478, 'van', false) ,
+  (479, 479, 'car', true) ,
+  (480, 480, 'car', false) ,
+  (481, 481, 'van', false) ,
+  (482, 482, 'van', false) ,
+  (483, 483, 'van', true) ,
+  (484, 484, 'truck', true) ,
+  (485, 485, 'truck', false) ,
+  (486, 486, 'van', false) ,
+  (487, 487, 'car', false) ,
+  (488, 488, 'car', false) ,
+  (489, 489, 'truck', false) ,
+  (490, 490, 'car', false) ,
+  (491, 491, 'truck', false) ,
+  (492, 492, 'truck', false) ,
+  (493, 493, 'truck', false) ,
+  (494, 494, 'car', false) ,
+  (495, 495, 'van', false) ,
+  (496, 496, 'van', false) ,
+  (497, 497, 'truck', false) ,
+  (498, 498, 'truck', false) ,
+  (499, 499, 'truck', true) ,
+  (500, 500, 'van', true) ,
+  (501, 501, 'truck', false) ,
+  (502, 502, 'truck', true) ,
+  (503, 503, 'van', true) ,
+  (504, 504, 'van', true) ,
+  (505, 505, 'van', true) ,
+  (506, 506, 'truck', true) ,
+  (507, 507, 'truck', true) ,
+  (508, 508, 'van', true) ,
+  (509, 509, 'truck', true) ,
+  (510, 510, 'car', true) ,
+  (511, 511, 'truck', false) ,
+  (512, 512, 'van', true) ,
+  (513, 513, 'truck', false) ,
+  (514, 514, 'car', true) ,
+  (515, 515, 'truck', true) ,
+  (516, 516, 'truck', false) ,
+  (517, 517, 'truck', false) ,
+  (518, 518, 'truck', true) ,
+  (519, 519, 'car', false) ,
+  (520, 520, 'truck', true) ,
+  (521, 521, 'car', false) ,
+  (522, 522, 'truck', true) ,
+  (523, 523, 'van', true) ,
+  (524, 524, 'car', true) ,
+  (525, 525, 'truck', true) ,
+  (526, 526, 'truck', true) ,
+  (527, 527, 'car', true) ,
+  (528, 528, 'van', true) ,
+  (529, 529, 'truck', false) ,
+  (530, 530, 'car', false) ,
+  (531, 531, 'truck', false) ,
+  (532, 532, 'car', true) ,
+  (533, 533, 'car', false) ,
+  (534, 534, 'van', true) ,
+  (535, 535, 'van', false) ,
+  (536, 536, 'van', false) ,
+  (537, 537, 'van', false) ,
+  (538, 538, 'truck', false) ,
+  (539, 539, 'truck', true) ,
+  (540, 540, 'car', true) ,
+  (541, 541, 'truck', false) ,
+  (542, 542, 'truck', true) ,
+  (543, 543, 'van', true) ,
+  (544, 544, 'van', true) ,
+  (545, 545, 'car', false) ,
+  (546, 546, 'car', true) ,
+  (547, 547, 'truck', false) ,
+  (548, 548, 'truck', true) ,
+  (549, 549, 'car', false) ,
+  (550, 550, 'car', false) ,
+  (551, 551, 'van', false) ,
+  (552, 552, 'truck', false) ,
+  (553, 553, 'van', false) ,
+  (554, 554, 'car', false) ,
+  (555, 555, 'truck', true) ,
+  (556, 556, 'truck', false) ,
+  (557, 557, 'van', false) ,
+  (558, 558, 'van', false) ,
+  (559, 559, 'van', false) ,
+  (560, 560, 'van', false) ,
+  (561, 561, 'truck', false) ,
+  (562, 562, 'van', true) ,
+  (563, 563, 'car', false) ,
+  (564, 564, 'van', false) ,
+  (565, 565, 'van', true) ,
+  (566, 566, 'truck', false) ,
+  (567, 567, 'truck', true) ,
+  (568, 568, 'van', false) ,
+  (569, 569, 'van', true) ,
+  (570, 570, 'van', true) ,
+  (571, 571, 'van', false) ,
+  (572, 572, 'truck', true) ,
+  (573, 573, 'truck', false) ,
+  (574, 574, 'van', true) ,
+  (575, 575, 'car', true) ,
+  (576, 576, 'van', false) ,
+  (577, 577, 'truck', false) ,
+  (578, 578, 'car', true) ,
+  (579, 579, 'van', false) ,
+  (580, 580, 'truck', false) ,
+  (581, 581, 'car', false) ,
+  (582, 582, 'truck', true) ,
+  (583, 583, 'truck', true) ,
+  (584, 584, 'car', false) ,
+  (585, 585, 'van', false) ,
+  (586, 586, 'truck', false) ,
+  (587, 587, 'van', false) ,
+  (588, 588, 'car', false) ,
+  (589, 589, 'car', false) ,
+  (590, 590, 'van', true) ,
+  (591, 591, 'truck', false) ,
+  (592, 592, 'truck', false) ,
+  (593, 593, 'truck', true) ,
+  (594, 594, 'truck', false) ,
+  (595, 595, 'van', false) ,
+  (596, 596, 'car', false) ,
+  (597, 597, 'truck', true) ,
+  (598, 598, 'car', true) ,
+  (599, 599, 'truck', true) ,
+  (600, 600, 'van', false) ,
+  (601, 601, 'car', false) ,
+  (602, 602, 'car', false) ,
+  (603, 603, 'car', true) ,
+  (604, 604, 'van', true) ,
+  (605, 605, 'van', true) ,
+  (606, 606, 'van', true) ,
+  (607, 607, 'car', true) ,
+  (608, 608, 'van', true) ,
+  (609, 609, 'truck', true) ,
+  (610, 610, 'car', true) ,
+  (611, 611, 'van', true) ,
+  (612, 612, 'car', true) ,
+  (613, 613, 'van', true) ,
+  (614, 614, 'truck', false) ,
+  (615, 615, 'truck', false) ,
+  (616, 616, 'van', true) ,
+  (617, 617, 'van', true) ,
+  (618, 618, 'car', false) ,
+  (619, 619, 'van', true) ,
+  (620, 620, 'van', true) ,
+  (621, 621, 'van', true) ,
+  (622, 622, 'car', false) ,
+  (623, 623, 'car', true) ,
+  (624, 624, 'car', true) ,
+  (625, 625, 'car', false) ,
+  (626, 626, 'car', false) ,
+  (627, 627, 'van', false) ,
+  (628, 628, 'van', true) ,
+  (629, 629, 'car', false) ,
+  (630, 630, 'car', false) ,
+  (631, 631, 'car', false) ,
+  (632, 632, 'van', true) ,
+  (633, 633, 'car', false) ,
+  (634, 634, 'van', true) ,
+  (635, 635, 'truck', false) ,
+  (636, 636, 'truck', false) ,
+  (637, 637, 'truck', false) ,
+  (638, 638, 'car', false) ,
+  (639, 639, 'van', false) ,
+  (640, 640, 'car', true) ,
+  (641, 641, 'truck', true) ,
+  (642, 642, 'truck', true) ,
+  (643, 643, 'car', true) ,
+  (644, 644, 'car', false) ,
+  (645, 645, 'car', true) ,
+  (646, 646, 'van', true) ,
+  (647, 647, 'truck', true) ,
+  (648, 648, 'car', true) ,
+  (649, 649, 'truck', true) ,
+  (650, 650, 'truck', true) ,
+  (651, 651, 'car', true) ,
+  (652, 652, 'car', false) ,
+  (653, 653, 'van', false) ,
+  (654, 654, 'van', false) ,
+  (655, 655, 'truck', false) ,
+  (656, 656, 'truck', false) ,
+  (657, 657, 'truck', false) ,
+  (658, 658, 'truck', true) ,
+  (659, 659, 'van', false) ,
+  (660, 660, 'car', true) ,
+  (661, 661, 'truck', false) ,
+  (662, 662, 'truck', false) ,
+  (663, 663, 'van', true) ,
+  (664, 664, 'truck', true) ,
+  (665, 665, 'van', true) ,
+  (666, 666, 'car', false) ,
+  (667, 667, 'car', true) ,
+  (668, 668, 'truck', false) ,
+  (669, 669, 'car', false) ,
+  (670, 670, 'truck', true) ,
+  (671, 671, 'truck', false) ,
+  (672, 672, 'truck', true) ,
+  (673, 673, 'truck', true) ,
+  (674, 674, 'car', false) ,
+  (675, 675, 'car', false) ,
+  (676, 676, 'truck', true) ,
+  (677, 677, 'car', false) ,
+  (678, 678, 'car', false) ,
+  (679, 679, 'van', false) ,
+  (680, 680, 'van', true) ,
+  (681, 681, 'car', true) ,
+  (682, 682, 'car', true) ,
+  (683, 683, 'van', false) ,
+  (684, 684, 'van', true) ,
+  (685, 685, 'car', false) ,
+  (686, 686, 'truck', false) ,
+  (687, 687, 'truck', true) ,
+  (688, 688, 'van', true) ,
+  (689, 689, 'truck', false) ,
+  (690, 690, 'car', true) ,
+  (691, 691, 'car', false) ,
+  (692, 692, 'van', true) ,
+  (693, 693, 'car', true) ,
+  (694, 694, 'car', true) ,
+  (695, 695, 'truck', true) ,
+  (696, 696, 'truck', true) ,
+  (697, 697, 'truck', false) ,
+  (698, 698, 'car', true) ,
+  (699, 699, 'van', false) ,
+  (700, 700, 'truck', false) ,
+  (701, 701, 'van', false) ,
+  (702, 702, 'truck', true) ,
+  (703, 703, 'truck', true) ,
+  (704, 704, 'car', true) ,
+  (705, 705, 'car', true) ,
+  (706, 706, 'truck', true) ,
+  (707, 707, 'truck', false) ,
+  (708, 708, 'car', false) ,
+  (709, 709, 'truck', true) ,
+  (710, 710, 'truck', false) ,
+  (711, 711, 'van', false) ,
+  (712, 712, 'car', false) ,
+  (713, 713, 'van', true) ,
+  (714, 714, 'truck', false) ,
+  (715, 715, 'truck', true) ,
+  (716, 716, 'car', true) ,
+  (717, 717, 'truck', false) ,
+  (718, 718, 'car', true) ,
+  (719, 719, 'van', false) ,
+  (720, 720, 'van', false) ,
+  (721, 721, 'van', true) ,
+  (722, 722, 'van', true) ,
+  (723, 723, 'van', false) ,
+  (724, 724, 'van', true) ,
+  (725, 725, 'van', true) ,
+  (726, 726, 'truck', true) ,
+  (727, 727, 'car', false) ,
+  (728, 728, 'truck', false) ,
+  (729, 729, 'van', false) ,
+  (730, 730, 'truck', true) ,
+  (731, 731, 'car', true) ,
+  (732, 732, 'car', false) ,
+  (733, 733, 'car', true) ,
+  (734, 734, 'truck', true) ,
+  (735, 735, 'car', true) ,
+  (736, 736, 'car', true) ,
+  (737, 737, 'van', false) ,
+  (738, 738, 'truck', false) ,
+  (739, 739, 'van', true) ,
+  (740, 740, 'van', true) ,
+  (741, 741, 'truck', false) ,
+  (742, 742, 'truck', false) ,
+  (743, 743, 'van', true) ,
+  (744, 744, 'truck', true) ,
+  (745, 745, 'truck', true) ,
+  (746, 746, 'van', false) ,
+  (747, 747, 'truck', true) ,
+  (748, 748, 'truck', false) ,
+  (749, 749, 'van', true) ,
+  (750, 750, 'car', false) ,
+  (751, 751, 'car', true) ,
+  (752, 752, 'truck', false) ,
+  (753, 753, 'van', true) ,
+  (754, 754, 'truck', true) ,
+  (755, 755, 'truck', true) ,
+  (756, 756, 'truck', false) ,
+  (757, 757, 'van', false) ,
+  (758, 758, 'van', true) ,
+  (759, 759, 'van', false) ,
+  (760, 760, 'car', true) ,
+  (761, 761, 'truck', false) ,
+  (762, 762, 'van', false) ,
+  (763, 763, 'van', false) ,
+  (764, 764, 'car', false) ,
+  (765, 765, 'van', false) ,
+  (766, 766, 'truck', true) ,
+  (767, 767, 'van', false) ,
+  (768, 768, 'van', false) ,
+  (769, 769, 'car', true) ,
+  (770, 770, 'truck', false) ,
+  (771, 771, 'van', false) ,
+  (772, 772, 'truck', false) ,
+  (773, 773, 'truck', false) ,
+  (774, 774, 'car', true) ,
+  (775, 775, 'van', false) ,
+  (776, 776, 'truck', false) ,
+  (777, 777, 'car', true) ,
+  (778, 778, 'van', true) ,
+  (779, 779, 'truck', true) ,
+  (780, 780, 'car', false) ,
+  (781, 781, 'truck', false) ,
+  (782, 782, 'truck', false) ,
+  (783, 783, 'van', false) ,
+  (784, 784, 'van', true) ,
+  (785, 785, 'van', false) ,
+  (786, 786, 'van', false) ,
+  (787, 787, 'van', true) ,
+  (788, 788, 'van', true) ,
+  (789, 789, 'car', false) ,
+  (790, 790, 'truck', true) ,
+  (791, 791, 'truck', true) ,
+  (792, 792, 'car', true) ,
+  (793, 793, 'car', false) ,
+  (794, 794, 'car', true) ,
+  (795, 795, 'van', false) ,
+  (796, 796, 'car', false) ,
+  (797, 797, 'van', false) ,
+  (798, 798, 'van', true) ,
+  (799, 799, 'van', false) ,
+  (800, 800, 'van', true) ,
+  (801, 801, 'truck', true) ,
+  (802, 802, 'van', false) ,
+  (803, 803, 'van', false) ,
+  (804, 804, 'van', false) ,
+  (805, 805, 'car', false) ,
+  (806, 806, 'truck', false) ,
+  (807, 807, 'truck', false) ,
+  (808, 808, 'van', true) ,
+  (809, 809, 'truck', false) ,
+  (810, 810, 'truck', false) ,
+  (811, 811, 'car', false) ,
+  (812, 812, 'truck', false) ,
+  (813, 813, 'van', false) ,
+  (814, 814, 'van', true) ,
+  (815, 815, 'truck', true) ,
+  (816, 816, 'car', true) ,
+  (817, 817, 'car', true) ,
+  (818, 818, 'truck', true) ,
+  (819, 819, 'van', true) ,
+  (820, 820, 'van', false) ,
+  (821, 821, 'van', true) ,
+  (822, 822, 'car', false) ,
+  (823, 823, 'truck', true) ,
+  (824, 824, 'car', false) ,
+  (825, 825, 'car', false) ,
+  (826, 826, 'truck', true) ,
+  (827, 827, 'car', true) ,
+  (828, 828, 'van', true) ,
+  (829, 829, 'van', true) ,
+  (830, 830, 'van', false) ,
+  (831, 831, 'car', false) ,
+  (832, 832, 'car', true) ,
+  (833, 833, 'truck', false) ,
+  (834, 834, 'car', false) ,
+  (835, 835, 'truck', false) ,
+  (836, 836, 'truck', true) ,
+  (837, 837, 'truck', false) ,
+  (838, 838, 'van', false) ,
+  (839, 839, 'car', true) ,
+  (840, 840, 'truck', true) ,
+  (841, 841, 'truck', true) ,
+  (842, 842, 'car', true) ,
+  (843, 843, 'truck', true) ,
+  (844, 844, 'truck', true) ,
+  (845, 845, 'van', true) ,
+  (846, 846, 'van', true) ,
+  (847, 847, 'truck', false) ,
+  (848, 848, 'car', true) ,
+  (849, 849, 'truck', false) ,
+  (850, 850, 'car', true) ,
+  (851, 851, 'car', true) ,
+  (852, 852, 'car', false) ,
+  (853, 853, 'van', false) ,
+  (854, 854, 'truck', true) ,
+  (855, 855, 'truck', true) ,
+  (856, 856, 'truck', false) ,
+  (857, 857, 'car', false) ,
+  (858, 858, 'car', true) ,
+  (859, 859, 'truck', false) ,
+  (860, 860, 'van', false) ,
+  (861, 861, 'car', true) ,
+  (862, 862, 'truck', false) ,
+  (863, 863, 'truck', true) ,
+  (864, 864, 'car', false) ,
+  (865, 865, 'truck', true) ,
+  (866, 866, 'truck', false) ,
+  (867, 867, 'car', false) ,
+  (868, 868, 'car', true) ,
+  (869, 869, 'car', true) ,
+  (870, 870, 'car', false) ,
+  (871, 871, 'van', false) ,
+  (872, 872, 'car', false) ,
+  (873, 873, 'truck', false) ,
+  (874, 874, 'truck', false) ,
+  (875, 875, 'truck', true) ,
+  (876, 876, 'van', false) ,
+  (877, 877, 'van', true) ,
+  (878, 878, 'car', false) ,
+  (879, 879, 'car', true) ,
+  (880, 880, 'truck', true) ,
+  (881, 881, 'truck', false) ,
+  (882, 882, 'van', false) ,
+  (883, 883, 'car', true) ,
+  (884, 884, 'truck', false) ,
+  (885, 885, 'van', false) ,
+  (886, 886, 'car', false) ,
+  (887, 887, 'car', true) ,
+  (888, 888, 'car', false) ,
+  (889, 889, 'car', false) ,
+  (890, 890, 'car', true) ,
+  (891, 891, 'car', false) ,
+  (892, 892, 'car', true) ,
+  (893, 893, 'car', true) ,
+  (894, 894, 'truck', true) ,
+  (895, 895, 'car', false) ,
+  (896, 896, 'car', true) ,
+  (897, 897, 'van', false) ,
+  (898, 898, 'van', true) ,
+  (899, 899, 'van', false) ,
+  (900, 900, 'truck', true) 

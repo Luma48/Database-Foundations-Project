@@ -6,7 +6,7 @@ CREATE TABLE Theoretical_Class(
     Topic varchar(50),
     Lesson_id INT,
     FOREIGN KEY (Lesson_id) REFERENCES Lesson(Lesson_id)
-);
+) ;
 
 INSERT INTO Theoretical_Class (ClassRoom, MaxCapacity, Topic, Lesson_id)
 VALUES
@@ -49,5 +49,5 @@ VALUES
    (802, 22, 'Cybersecurity in Databases', 37),
    (803, 30, 'IoT Data Management', 38),
    (804, 25, 'Database DevOps Practices', 39),
-   (805, 33, 'Data Governance Strategies', 40);
+   (805, 33, 'Data Governance Strategies', 40) 
 

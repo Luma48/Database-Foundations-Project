@@ -3,5 +3,5 @@ CREATE TABLE BranchAdministrativePosition (
     EmployeeID INT,
     PRIMARY KEY (BranchID, EmployeeID),
     FOREIGN KEY (BranchID) REFERENCES Branch(BranchID),
-    FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
+    FOREIGN KEY (EmployeeID) REFERENCES Employee(Employee_Id)
 );
