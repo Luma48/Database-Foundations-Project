@@ -1,8 +1,7 @@
 CREATE TABLE Practical_Class (
-    Practical_ClassID SERIAL PRIMARY KEY,
+    Lesson_id SMALLINT PRIMARY KEY,
     Vehicle VARCHAR(50),
-    Evaluation VARCHAR(50),
-    Lesson_id INT,
+    Evaluation VARCHAR(100),
     FOREIGN KEY (Lesson_id) REFERENCES Lesson(Lesson_id)
 ) ;
 
