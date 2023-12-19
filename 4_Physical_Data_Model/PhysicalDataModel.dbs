@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Physical Data Model" id="Project-204f" database="PostgreSQL" >
+	<comment><![CDATA[A physcial data model for a driving school.]]></comment>
+	<schema name="physical data model" >
+		<table name="administrative position" prior="instructor_0" >
+			<comment><![CDATA[one of the employees possible titles.]]></comment>
+			<column name="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="pk_fk_2_branch_id" prior="pk_fk_branch_id" type="integer" jt="4" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<index name="pk_administrative_position" unique="PRIMARY_KEY" >
+				<column name="pk_fk_2_branch_id" />
+				<column name="pk_fk_employee_id" />
+			</index>
+			<fk name="fk_administrative_position_employee" to_schema="physical data model" to_table="employee" >
+				<fk_column name="pk_fk_employee_id" pk="pk_employee_id" />
+			</fk>
+			<fk name="fk_administrative_position_branch" to_schema="physical data model" to_table="branch" >
+				<fk_column name="pk_fk_2_branch_id" pk="pk_branch_id" />
+			</fk>
+		</table>
+		<table name="assignedlesson" prior="instructor_0" >
+			<comment><![CDATA[the N-M relation between and intruction and a leeson which is assigned to them.]]></comment>
+			<column name="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="pk_fk_2_lesson_id" prior="pk_fk_branch_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this N-M relation (uses the respective data type).]]></comment>
+			</column>
+			<index name="pk_assignedlesson" unique="PRIMARY_KEY" >
+				<column name="pk_fk_2_lesson_id" />
+				<column name="pk_fk_employee_id" />
+			</index>
+			<fk name="fk_instructor_assginedlesson" to_schema="physical data model" to_table="instructor" >
+				<fk_column name="pk_fk_employee_id" pk="pk_fk_employee_id" />
+			</fk>
+			<fk name="fk_assignedlesson_lesson" to_schema="physical data model" to_table="lesson" >
+				<fk_column name="pk_fk_2_lesson_id" pk="lesson_id" />
+			</fk>
+		</table>
+		<table name="branch" prior="tbl" >
+			<comment><![CDATA[The branch entity, gives us information such as the name, address, capacity and HQ of the branch.]]></comment>
+			<column name="pk_branch_id" prior="branch_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[The primary key for the branch (Uses smallint because the number is not very big).]]></comment>
+			</column>
+			<column name="name" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[The name of the branch (Uses varchar as the name length is not fixed between branches).]]></comment>
+			</column>
+			<column name="address" type="varchar" length="100" jt="12" >
+				<comment><![CDATA[The address of the branch (Uses varchar as it is composed of both letters and numbers in which no numerical operations are performed and the character length is not fixed between branches).]]></comment>
+			</column>
+			<column name="employee_capacity" type="smallint" jt="5" >
+				<comment><![CDATA[The amount of possible employees per branch (Uses smallinto because the number will never be extraordinarily big).]]></comment>
+			</column>
+			<column name="hq" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[The headquaters of the brach (Uses varchar as the HQ name is not fixed between branches).]]></comment>
+			</column>
+			<column name="fk_employee_id" prior="employee_id" type="smallint" jt="5" >
+				<comment><![CDATA[The foreign key relating to the employee table.]]></comment>
+			</column>
+			<index name="pk_branch" unique="PRIMARY_KEY" >
+				<column name="pk_branch_id" />
+			</index>
+			<fk name="fk_branch_employee" to_schema="physical data model" to_table="employee" >
+				<fk_column name="fk_employee_id" pk="pk_employee_id" />
+			</fk>
+		</table>
+		<table name="email" prior="license_0" >
+			<comment><![CDATA[the email of both the student and instructor (it is multivalued).]]></comment>
+			<column name="pk_fk_1_employee_id" prior="pk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[pk_fk_1 of the email (Uses smallint as the number will never get extraordinarily big).]]></comment>
+			</column>
+			<column name="pk_fk_2_student_id" prior="fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[pk_fk_2 of the email (Uses smallint as the number will never get extraordinarily big).]]></comment>
+			</column>
+			<column name="email" prior="catagory" type="varchar" length="50" jt="12" mandatory="y" >
+				<comment><![CDATA[The catagory for a license (Uses char as it is always represented by 1 letter A,B,C,D, ...)]]></comment>
+			</column>
+			<index name="pk_email" unique="PRIMARY_KEY" >
+				<column name="pk_fk_1_employee_id" />
+				<column name="pk_fk_2_student_id" />
+				<column name="email" />
+			</index>
+			<fk name="fk_employee_email" to_schema="physical data model" to_table="employee" >
+				<fk_column name="pk_fk_1_employee_id" pk="pk_employee_id" />
+			</fk>
+			<fk name="fk_license_student" to_schema="physical data model" to_table="student" >
+				<fk_column name="pk_fk_2_student_id" pk="pk_student_id" />
+			</fk>
+		</table>
+		<table name="employee" prior="branch_0" >
+			<comment><![CDATA[The branch entity, gives us information such as the name, address, capacity and HQ of the branch.]]></comment>
+			<column name="pk_employee_id" prior="employee_id2" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[The primary key for the employee (Uses smallint because the number is not very big).]]></comment>
+			</column>
+			<column name="name" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[The first and last name of each employee (Uses varchar as the name length is not fixed between employees).]]></comment>
+			</column>
+			<column name="gender" prior="address" type="char" length="1" jt="1" >
+				<comment><![CDATA[The gender of an employee (uses char as we use always one letter to represent the employee's gender: M,F or X).]]></comment>
+			</column>
+			<column name="date of birth" prior="employee_capacity" type="date" jt="91" >
+				<comment><![CDATA[The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).]]></comment>
+			</column>
+			<column name="phone number" prior="hq" type="text" jt="12" >
+				<comment><![CDATA[An employees phone number (Uses text as it the most efficient way to store a phone number).]]></comment>
+			</column>
+			<column name="job title" prior="employee_id" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[The employees job name (Uses varchar as each job title has a different character length).]]></comment>
+			</column>
+			<index name="pk_branch_0" unique="PRIMARY_KEY" >
+				<column name="pk_employee_id" />
+			</index>
+		</table>
+		<table name="instructor" prior="tbl" >
+			<comment><![CDATA[one of the employees possible titles.]]></comment>
+			<column name="pk_fk_employee_id" prior="employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="pk_fk_2_branch_id" prior="pk_fk_branch_id" type="integer" jt="4" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<index name="pk_instructor" unique="PRIMARY_KEY" >
+				<column name="pk_fk_2_branch_id" />
+				<column name="pk_fk_employee_id" />
+			</index>
+			<index name="unq_instructor_pk_fk_employee_id" unique="UNIQUE_KEY" >
+				<column name="pk_fk_employee_id" />
+			</index>
+			<fk name="fk_instructor_employee" to_schema="physical data model" to_table="employee" >
+				<fk_column name="pk_fk_employee_id" pk="pk_employee_id" />
+			</fk>
+			<fk name="fk_instructor_branch" to_schema="physical data model" to_table="branch" >
+				<fk_column name="pk_fk_2_branch_id" pk="pk_branch_id" />
+			</fk>
+		</table>
+		<table name="lesson" prior="tbl" >
+			<comment><![CDATA[the tabel containing our lesson data.]]></comment>
+			<column name="lesson_id" type="integer" jt="4" mandatory="y" >
+				<comment><![CDATA[the id of the lesson (Uses smallint as the value nver gets extraordinarily big).]]></comment>
+			</column>
+			<column name="date" type="date" jt="91" >
+				<comment><![CDATA[the date at which the lesson will take place (Uses the date data type as we are storing a literal date).]]></comment>
+			</column>
+			<column name="time" type="time" jt="92" >
+				<comment><![CDATA[the time at which the lesson takes place, duration can be derrived form this (Uses the time data types to store time).]]></comment>
+			</column>
+			<column name="type" type="char" length="1" jt="1" >
+				<comment><![CDATA[the type of lesson taking place which can be either theoretical or practical (uses char as the two types can be represented using one letter P for practical and T for theoretical).]]></comment>
+			</column>
+			<column name="topic" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[the topic of the given lesson (uses varchar as the character amount is not fixed per topic).]]></comment>
+			</column>
+			<column name="max participants" type="smallint" jt="5" >
+				<comment><![CDATA[the total amount of people who can take the lesson at once. (Uses smallint as the number will never get extraordinarily big).]]></comment>
+			</column>
+			<index name="pk_lesson" unique="PRIMARY_KEY" >
+				<column name="lesson_id" />
+			</index>
+		</table>
+		<table name="license" prior="other_0" >
+			<comment><![CDATA[the employees license]]></comment>
+			<column name="pk_license_id" prior="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk of the license (Uses smallint as the number will never get extraordinarily big).]]></comment>
+			</column>
+			<column name="fk_employee_id" type="smallint" jt="5" />
+			<column name="catagory" prior="job title" type="char" length="1" jt="1" mandatory="y" >
+				<comment><![CDATA[The catagory for a license (Uses char as it is always represented by 1 letter A,B,C,D, ...)]]></comment>
+			</column>
+			<index name="pk_license" unique="PRIMARY_KEY" >
+				<column name="pk_license_id" />
+			</index>
+			<fk name="fk_license_instructor" to_schema="physical data model" to_table="instructor" >
+				<fk_column name="fk_employee_id" pk="pk_fk_employee_id" />
+			</fk>
+		</table>
+		<table name="other" prior="instructor_0" >
+			<comment><![CDATA[one of the employees possible titles.]]></comment>
+			<column name="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="job title" prior="pk_fk_branch_id" type="varchar" length="50" jt="12" mandatory="y" />
+			<index name="pk_other" unique="PRIMARY_KEY" >
+				<column name="pk_fk_employee_id" />
+			</index>
+			<fk name="fk_other_employee" to_schema="physical data model" to_table="employee" >
+				<fk_column name="pk_fk_employee_id" pk="pk_employee_id" />
+			</fk>
+		</table>
+		<table name="practical class" prior="instructor_0" >
+			<comment><![CDATA[one of the employees possible titles.]]></comment>
+			<column name="pk_fk_1_lesson_id" prior="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="pk_fk_2_license_id" prior="pk_fk_2_branch_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="vehicle" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[the type of vehicle (Uses varchar as the vehicle type names are not at a fixed character length).]]></comment>
+			</column>
+			<column name="evaluation" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[gives a score based on how well you did (uses varchar as both characters and numbers are included here and there are no numeric operations).]]></comment>
+			</column>
+			<index name="pk_instructor_0" unique="PRIMARY_KEY" >
+				<column name="pk_fk_2_license_id" />
+				<column name="pk_fk_1_lesson_id" />
+			</index>
+			<fk name="fk_lesson_practicalclass" to_schema="physical data model" to_table="lesson" >
+				<fk_column name="pk_fk_1_lesson_id" pk="lesson_id" />
+			</fk>
+			<fk name="fk_license_practicallesson" to_schema="physical data model" to_table="license" >
+				<fk_column name="pk_fk_2_license_id" pk="pk_license_id" />
+			</fk>
+		</table>
+		<table name="student" prior="employee_0" >
+			<comment><![CDATA[The branch entity, gives us information such as the name, address, capacity and HQ of the branch.]]></comment>
+			<column name="pk_student_id" prior="pk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[The primary key for the student(Uses smallint because the number is not very big).]]></comment>
+			</column>
+			<column name="name" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[The first and last name of each student(Uses varchar as the name length is not fixed between employees).]]></comment>
+			</column>
+			<column name="gender" type="char" length="1" jt="1" >
+				<comment><![CDATA[The gender of an employee (uses char as we use always one letter to represent the employee's gender: M,F or X).]]></comment>
+			</column>
+			<column name="date of birth" type="date" jt="91" >
+				<comment><![CDATA[The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).]]></comment>
+			</column>
+			<column name="phone number" type="text" jt="12" >
+				<comment><![CDATA[An employees phone number (Uses text as it the most efficient way to store a phone number).]]></comment>
+			</column>
+			<index name="pk_student_1" unique="PRIMARY_KEY" >
+				<column name="pk_student_id" />
+			</index>
+			<fk name="fk_student_studentbookslesson" to_schema="physical data model" to_table="studentbookslesson" >
+				<fk_column name="pk_student_id" pk="pk_fk_2_student_id" />
+			</fk>
+		</table>
+		<table name="studentbookslesson" prior="assignedlesson_0" >
+			<comment><![CDATA[the N-M relation between and intruction and a leeson which is assigned to them.]]></comment>
+			<column name="pk_fk_1_lesson_id" prior="pk_fk_2_lesson_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this N-M relation (uses the respective data type).]]></comment>
+			</column>
+			<column name="pk_fk_2_student_id" prior="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this N-M relation.]]></comment>
+			</column>
+			<index name="pk_studentbookslesson" unique="PRIMARY_KEY" >
+				<column name="pk_fk_1_lesson_id" />
+				<column name="pk_fk_2_student_id" />
+			</index>
+			<index name="unq_studentbookslesson_pk_fk_2_student_id" unique="UNIQUE_KEY" >
+				<column name="pk_fk_2_student_id" />
+			</index>
+			<fk name="fk_lesson_studentbookslesson" to_schema="physical data model" to_table="lesson" >
+				<fk_column name="pk_fk_1_lesson_id" pk="lesson_id" />
+			</fk>
+			<fk name="fk_studentbookslesson_lesson" to_schema="physical data model" to_table="lesson" >
+				<fk_column name="pk_fk_1_lesson_id" pk="lesson_id" />
+			</fk>
+		</table>
+		<table name="theoretical class" prior="practical class_0" >
+			<comment><![CDATA[one of the employees possible titles.]]></comment>
+			<column name="pk_fk_lesson_id" prior="pk_fk_1_lesson_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
+			</column>
+			<column name="classroom" prior="pk_fk_2_license_id" type="smallint" jt="5" mandatory="y" >
+				<comment><![CDATA[the classroom number (Uses smallint as the number will never be extraordinarily big).]]></comment>
+			</column>
+			<column name="max capacity" prior="vehicle" type="smallint" jt="5" >
+				<comment><![CDATA[the max number of participants per lesson (Uses smallint as the number will never be extraordinarily big).]]></comment>
+			</column>
+			<column name="topic" prior="evaluation" type="varchar" length="50" jt="12" >
+				<comment><![CDATA[the topic which is to be discussed during the theoretical lesson (Uses varchar as not all topics have the same fixed character length).]]></comment>
+			</column>
+			<index name="pk_theoretical class" unique="PRIMARY_KEY" >
+				<column name="pk_fk_lesson_id" />
+			</index>
+			<fk name="fk_theoretical class_lesson" to_schema="physical data model" to_table="lesson" >
+				<fk_column name="pk_fk_lesson_id" pk="lesson_id" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-141c" show_relation="columns" >
+		<entity schema="physical data model" name="administrative position" color="3986C1" x="592" y="688" />
+		<entity schema="physical data model" name="assignedlesson" color="3986C1" x="864" y="352" />
+		<entity schema="physical data model" name="branch" color="C1D8EE" x="48" y="496" />
+		<entity schema="physical data model" name="email" color="3986C1" x="928" y="48" />
+		<entity schema="physical data model" name="employee" color="3986C1" x="352" y="496" />
+		<entity schema="physical data model" name="instructor" color="C1D8EE" x="592" y="416" />
+		<entity schema="physical data model" name="lesson" color="C1D8EE" x="1120" y="336" />
+		<entity schema="physical data model" name="license" color="3986C1" x="864" y="512" />
+		<entity schema="physical data model" name="other" color="3986C1" x="592" y="544" />
+		<entity schema="physical data model" name="practical class" color="3986C1" x="1328" y="544" />
+		<entity schema="physical data model" name="student" color="3986C1" x="1744" y="400" />
+		<entity schema="physical data model" name="studentbookslesson" color="3986C1" x="1440" y="432" />
+		<entity schema="physical data model" name="theoretical class" color="3986C1" x="1376" y="208" />
+		<callout x="1056" y="832" pointer="Round" >
+			<comment><![CDATA[This is a layout - a diagram with tools.
+- Right-click the layout to create new tables. 
+- Double-click table headers to edit. 
+- For a better understanding of the schema, create multiple layouts.
+- Save the design to the model file, and deploy from 'Schema / Create into the database'.]]></comment>
+		</callout>
+	</layout>
+</project>
