@@ -4,25 +4,25 @@ CREATE  TABLE "physical data model".employee (
 	pk_employee_id       smallint  NOT NULL  ,
 	name                 varchar(50)    ,
 	gender               char(1)    ,
-	"date of birth"      date    ,
-	"phone number"       text    ,
-	"job title"          varchar(50)    ,
-	CONSTRAINT pk_employee PRIMARY KEY ( pk_employee_id )
+	date_of_birth        date    ,
+	phone_number         text    ,
+	job_title            varchar(50)    ,
+	CONSTRAINT pk_branch_0 PRIMARY KEY ( pk_employee_id )
  );
 
 CREATE  TABLE "physical data model".lesson ( 
-	pk_lesson_id         integer  NOT NULL  ,
+	lesson_id            integer  NOT NULL  ,
 	"date"               date    ,
 	"time"               time    ,
 	"type"               char(1)    ,
 	topic                varchar(50)    ,
-	"max participants"   smallint    ,
-	CONSTRAINT pk_lesson PRIMARY KEY ( pk_lesson_id )
+	max_participants     smallint    ,
+	CONSTRAINT pk_lesson PRIMARY KEY ( lesson_id )
  );
 
 CREATE  TABLE "physical data model".other ( 
 	pk_fk_employee_id    smallint  NOT NULL  ,
-	"job title"          varchar(50)  NOT NULL  ,
+	job_title            varchar(50)  NOT NULL  ,
 	CONSTRAINT pk_other PRIMARY KEY ( pk_fk_employee_id )
  );
 
@@ -33,10 +33,10 @@ CREATE  TABLE "physical data model".studentbookslesson (
 	CONSTRAINT unq_studentbookslesson_pk_fk_2_student_id UNIQUE ( pk_fk_2_student_id ) 
  );
 
-CREATE  TABLE "physical data model"."theoretical class" ( 
+CREATE  TABLE "physical data model".theoreticalclass ( 
 	pk_fk_lesson_id      smallint  NOT NULL  ,
 	classroom            smallint  NOT NULL  ,
-	"max capacity"       smallint    ,
+	max_capacity         smallint    ,
 	topic                varchar(50)    ,
 	CONSTRAINT "pk_theoretical class" PRIMARY KEY ( pk_fk_lesson_id )
  );
@@ -65,21 +65,21 @@ CREATE  TABLE "physical data model".license (
 	CONSTRAINT pk_license PRIMARY KEY ( pk_license_id )
  );
 
-CREATE  TABLE "physical data model"."practical class" ( 
+CREATE  TABLE "physical data model".practicalclass ( 
 	pk_fk_1_lesson_id    smallint  NOT NULL  ,
 	pk_fk_2_license_id   smallint  NOT NULL  ,
 	vehicle              varchar(50)    ,
 	evaluation           varchar(50)    ,
-	CONSTRAINT pk_practicalclass PRIMARY KEY ( pk_fk_2_license_id, pk_fk_1_lesson_id )
+	CONSTRAINT pk_instructor_0 PRIMARY KEY ( pk_fk_2_license_id, pk_fk_1_lesson_id )
  );
 
 CREATE  TABLE "physical data model".student ( 
 	pk_student_id        smallint  NOT NULL  ,
 	name                 varchar(50)    ,
 	gender               char(1)    ,
-	"date of birth"      date    ,
-	"phone number"       text    ,
-	CONSTRAINT pk_student PRIMARY KEY ( pk_student_id )
+	date_of_birth        date    ,
+	phone_number         text    ,
+	CONSTRAINT pk_student_1 PRIMARY KEY ( pk_student_id )
  );
 
 CREATE  TABLE "physical data model"."administrative position" ( 
@@ -107,7 +107,7 @@ ALTER TABLE "physical data model"."administrative position" ADD CONSTRAINT fk_ad
 
 ALTER TABLE "physical data model".assignedlesson ADD CONSTRAINT fk_instructor_assginedlesson FOREIGN KEY ( pk_fk_employee_id ) REFERENCES "physical data model".instructor( pk_fk_employee_id );
 
-ALTER TABLE "physical data model".assignedlesson ADD CONSTRAINT fk_assignedlesson_lesson FOREIGN KEY ( pk_fk_2_lesson_id ) REFERENCES "physical data model".lesson( pk_lesson_id );
+ALTER TABLE "physical data model".assignedlesson ADD CONSTRAINT fk_assignedlesson_lesson FOREIGN KEY ( pk_fk_2_lesson_id ) REFERENCES "physical data model".lesson( lesson_id );
 
 ALTER TABLE "physical data model".branch ADD CONSTRAINT fk_branch_employee FOREIGN KEY ( fk_employee_id ) REFERENCES "physical data model".employee( pk_employee_id );
 
@@ -123,17 +123,17 @@ ALTER TABLE "physical data model".license ADD CONSTRAINT fk_license_instructor F
 
 ALTER TABLE "physical data model".other ADD CONSTRAINT fk_other_employee FOREIGN KEY ( pk_fk_employee_id ) REFERENCES "physical data model".employee( pk_employee_id );
 
-ALTER TABLE "physical data model"."practical class" ADD CONSTRAINT fk_lesson_practicalclass FOREIGN KEY ( pk_fk_1_lesson_id ) REFERENCES "physical data model".lesson( pk_lesson_id );
+ALTER TABLE "physical data model".practicalclass ADD CONSTRAINT fk_lesson_practicalclass FOREIGN KEY ( pk_fk_1_lesson_id ) REFERENCES "physical data model".lesson( lesson_id );
 
-ALTER TABLE "physical data model"."practical class" ADD CONSTRAINT fk_license_practicallesson FOREIGN KEY ( pk_fk_2_license_id ) REFERENCES "physical data model".license( pk_license_id );
+ALTER TABLE "physical data model".practicalclass ADD CONSTRAINT fk_license_practicallesson FOREIGN KEY ( pk_fk_2_license_id ) REFERENCES "physical data model".license( pk_license_id );
 
 ALTER TABLE "physical data model".student ADD CONSTRAINT fk_student_studentbookslesson FOREIGN KEY ( pk_student_id ) REFERENCES "physical data model".studentbookslesson( pk_fk_2_student_id );
 
-ALTER TABLE "physical data model".studentbookslesson ADD CONSTRAINT fk_lesson_studentbookslesson FOREIGN KEY ( pk_fk_1_lesson_id ) REFERENCES "physical data model".lesson( pk_lesson_id );
+ALTER TABLE "physical data model".studentbookslesson ADD CONSTRAINT fk_lesson_studentbookslesson FOREIGN KEY ( pk_fk_1_lesson_id ) REFERENCES "physical data model".lesson( lesson_id );
 
-ALTER TABLE "physical data model".studentbookslesson ADD CONSTRAINT fk_studentbookslesson_lesson FOREIGN KEY ( pk_fk_1_lesson_id ) REFERENCES "physical data model".lesson( pk_lesson_id );
+ALTER TABLE "physical data model".studentbookslesson ADD CONSTRAINT fk_studentbookslesson_lesson FOREIGN KEY ( pk_fk_1_lesson_id ) REFERENCES "physical data model".lesson( lesson_id );
 
-ALTER TABLE "physical data model"."theoretical class" ADD CONSTRAINT "fk_theoretical class_lesson" FOREIGN KEY ( pk_fk_lesson_id ) REFERENCES "physical data model".lesson( pk_lesson_id );
+ALTER TABLE "physical data model".theoreticalclass ADD CONSTRAINT "fk_theoretical class_lesson" FOREIGN KEY ( pk_fk_lesson_id ) REFERENCES "physical data model".lesson( lesson_id );
 
 COMMENT ON TABLE "physical data model".employee IS 'The branch entity, gives us information such as the name, address, capacity and HQ of the branch.';
 
@@ -143,15 +143,15 @@ COMMENT ON COLUMN "physical data model".employee.name IS 'The first and last nam
 
 COMMENT ON COLUMN "physical data model".employee.gender IS 'The gender of an employee (uses char as we use always one letter to represent the employee''s gender: M,F or X).';
 
-COMMENT ON COLUMN "physical data model".employee."date of birth" IS 'The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).';
+COMMENT ON COLUMN "physical data model".employee.date_of_birth IS 'The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).';
 
-COMMENT ON COLUMN "physical data model".employee."phone number" IS 'An employees phone number (Uses text as it the most efficient way to store a phone number).';
+COMMENT ON COLUMN "physical data model".employee.phone_number IS 'An employees phone number (Uses text as it the most efficient way to store a phone number).';
 
-COMMENT ON COLUMN "physical data model".employee."job title" IS 'The employees job name (Uses varchar as each job title has a different character length).';
+COMMENT ON COLUMN "physical data model".employee.job_title IS 'The employees job name (Uses varchar as each job title has a different character length).';
 
 COMMENT ON TABLE "physical data model".lesson IS 'the tabel containing our lesson data.';
 
-COMMENT ON COLUMN "physical data model".lesson.pk_lesson_id IS 'the id of the lesson (Uses smallint as the value nver gets extraordinarily big).';
+COMMENT ON COLUMN "physical data model".lesson.lesson_id IS 'the id of the lesson (Uses smallint as the value nver gets extraordinarily big).';
 
 COMMENT ON COLUMN "physical data model".lesson."date" IS 'the date at which the lesson will take place (Uses the date data type as we are storing a literal date).';
 
@@ -161,7 +161,7 @@ COMMENT ON COLUMN "physical data model".lesson."type" IS 'the type of lesson tak
 
 COMMENT ON COLUMN "physical data model".lesson.topic IS 'the topic of the given lesson (uses varchar as the character amount is not fixed per topic).';
 
-COMMENT ON COLUMN "physical data model".lesson."max participants" IS 'the total amount of people who can take the lesson at once. (Uses smallint as the number will never get extraordinarily big).';
+COMMENT ON COLUMN "physical data model".lesson.max_participants IS 'the total amount of people who can take the lesson at once. (Uses smallint as the number will never get extraordinarily big).';
 
 COMMENT ON TABLE "physical data model".other IS 'one of the employees possible titles.';
 
@@ -173,15 +173,15 @@ COMMENT ON COLUMN "physical data model".studentbookslesson.pk_fk_1_lesson_id IS 
 
 COMMENT ON COLUMN "physical data model".studentbookslesson.pk_fk_2_student_id IS 'the pk_fk for this N-M relation.';
 
-COMMENT ON TABLE "physical data model"."theoretical class" IS 'one of the employees possible titles.';
+COMMENT ON TABLE "physical data model".theoreticalclass IS 'one of the employees possible titles.';
 
-COMMENT ON COLUMN "physical data model"."theoretical class".pk_fk_lesson_id IS 'the pk_fk for this disjoint (Uses the same datatype as explained before).';
+COMMENT ON COLUMN "physical data model".theoreticalclass.pk_fk_lesson_id IS 'the pk_fk for this disjoint (Uses the same datatype as explained before).';
 
-COMMENT ON COLUMN "physical data model"."theoretical class".classroom IS 'the classroom number (Uses smallint as the number will never be extraordinarily big).';
+COMMENT ON COLUMN "physical data model".theoreticalclass.classroom IS 'the classroom number (Uses smallint as the number will never be extraordinarily big).';
 
-COMMENT ON COLUMN "physical data model"."theoretical class"."max capacity" IS 'the max number of participants per lesson (Uses smallint as the number will never be extraordinarily big).';
+COMMENT ON COLUMN "physical data model".theoreticalclass.max_capacity IS 'the max number of participants per lesson (Uses smallint as the number will never be extraordinarily big).';
 
-COMMENT ON COLUMN "physical data model"."theoretical class".topic IS 'the topic which is to be discussed during the theoretical lesson (Uses varchar as not all topics have the same fixed character length).';
+COMMENT ON COLUMN "physical data model".theoreticalclass.topic IS 'the topic which is to be discussed during the theoretical lesson (Uses varchar as not all topics have the same fixed character length).';
 
 COMMENT ON TABLE "physical data model".branch IS 'The branch entity, gives us information such as the name, address, capacity and HQ of the branch.';
 
@@ -209,15 +209,15 @@ COMMENT ON COLUMN "physical data model".license.pk_license_id IS 'the pk of the 
 
 COMMENT ON COLUMN "physical data model".license.catagory IS 'The catagory for a license (Uses char as it is always represented by 1 letter A,B,C,D, ...)';
 
-COMMENT ON TABLE "physical data model"."practical class" IS 'one of the employees possible titles.';
+COMMENT ON TABLE "physical data model".practicalclass IS 'one of the employees possible titles.';
 
-COMMENT ON COLUMN "physical data model"."practical class".pk_fk_1_lesson_id IS 'the pk_fk for this disjoint (Uses the same datatype as explained before).';
+COMMENT ON COLUMN "physical data model".practicalclass.pk_fk_1_lesson_id IS 'the pk_fk for this disjoint (Uses the same datatype as explained before).';
 
-COMMENT ON COLUMN "physical data model"."practical class".pk_fk_2_license_id IS 'the pk_fk for this disjoint (Uses the same datatype as explained before).';
+COMMENT ON COLUMN "physical data model".practicalclass.pk_fk_2_license_id IS 'the pk_fk for this disjoint (Uses the same datatype as explained before).';
 
-COMMENT ON COLUMN "physical data model"."practical class".vehicle IS 'the type of vehicle (Uses varchar as the vehicle type names are not at a fixed character length).';
+COMMENT ON COLUMN "physical data model".practicalclass.vehicle IS 'the type of vehicle (Uses varchar as the vehicle type names are not at a fixed character length).';
 
-COMMENT ON COLUMN "physical data model"."practical class".evaluation IS 'gives a score based on how well you did (uses varchar as both characters and numbers are included here and there are no numeric operations).';
+COMMENT ON COLUMN "physical data model".practicalclass.evaluation IS 'gives a score based on how well you did (uses varchar as both characters and numbers are included here and there are no numeric operations).';
 
 COMMENT ON TABLE "physical data model".student IS 'The branch entity, gives us information such as the name, address, capacity and HQ of the branch.';
 
@@ -227,9 +227,9 @@ COMMENT ON COLUMN "physical data model".student.name IS 'The first and last name
 
 COMMENT ON COLUMN "physical data model".student.gender IS 'The gender of an employee (uses char as we use always one letter to represent the employee''s gender: M,F or X).';
 
-COMMENT ON COLUMN "physical data model".student."date of birth" IS 'The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).';
+COMMENT ON COLUMN "physical data model".student.date_of_birth IS 'The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).';
 
-COMMENT ON COLUMN "physical data model".student."phone number" IS 'An employees phone number (Uses text as it the most efficient way to store a phone number).';
+COMMENT ON COLUMN "physical data model".student.phone_number IS 'An employees phone number (Uses text as it the most efficient way to store a phone number).';
 
 COMMENT ON TABLE "physical data model"."administrative position" IS 'one of the employees possible titles.';
 

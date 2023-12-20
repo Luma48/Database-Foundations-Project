@@ -101,13 +101,13 @@
 			<column name="gender" prior="address" type="char" length="1" jt="1" >
 				<comment><![CDATA[The gender of an employee (uses char as we use always one letter to represent the employee's gender: M,F or X).]]></comment>
 			</column>
-			<column name="date of birth" prior="employee_capacity" type="date" jt="91" >
+			<column name="date_of_birth" prior="date of birth" type="date" jt="91" >
 				<comment><![CDATA[The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).]]></comment>
 			</column>
-			<column name="phone number" prior="hq" type="text" jt="12" >
+			<column name="phone_number" prior="phone number" type="text" jt="12" >
 				<comment><![CDATA[An employees phone number (Uses text as it the most efficient way to store a phone number).]]></comment>
 			</column>
-			<column name="job title" prior="employee_id" type="varchar" length="50" jt="12" >
+			<column name="job_title" prior="job title" type="varchar" length="50" jt="12" >
 				<comment><![CDATA[The employees job name (Uses varchar as each job title has a different character length).]]></comment>
 			</column>
 			<index name="pk_branch_0" unique="PRIMARY_KEY" >
@@ -153,7 +153,7 @@
 			<column name="topic" type="varchar" length="50" jt="12" >
 				<comment><![CDATA[the topic of the given lesson (uses varchar as the character amount is not fixed per topic).]]></comment>
 			</column>
-			<column name="max participants" type="smallint" jt="5" >
+			<column name="max_participants" prior="max participants" type="smallint" jt="5" >
 				<comment><![CDATA[the total amount of people who can take the lesson at once. (Uses smallint as the number will never get extraordinarily big).]]></comment>
 			</column>
 			<index name="pk_lesson" unique="PRIMARY_KEY" >
@@ -181,7 +181,7 @@
 			<column name="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
 				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
 			</column>
-			<column name="job title" prior="pk_fk_branch_id" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="job_title" prior="job title" type="varchar" length="50" jt="12" mandatory="y" />
 			<index name="pk_other" unique="PRIMARY_KEY" >
 				<column name="pk_fk_employee_id" />
 			</index>
@@ -189,7 +189,7 @@
 				<fk_column name="pk_fk_employee_id" pk="pk_employee_id" />
 			</fk>
 		</table>
-		<table name="practical class" prior="instructor_0" >
+		<table name="practicalclass" prior="practical class" >
 			<comment><![CDATA[one of the employees possible titles.]]></comment>
 			<column name="pk_fk_1_lesson_id" prior="pk_fk_employee_id" type="smallint" jt="5" mandatory="y" >
 				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
@@ -225,10 +225,10 @@
 			<column name="gender" type="char" length="1" jt="1" >
 				<comment><![CDATA[The gender of an employee (uses char as we use always one letter to represent the employee's gender: M,F or X).]]></comment>
 			</column>
-			<column name="date of birth" type="date" jt="91" >
+			<column name="date_of_birth" prior="date of birth" type="date" jt="91" >
 				<comment><![CDATA[The date of birth from each employee, age can be derrvied from this (uses date as we are storing a date).]]></comment>
 			</column>
-			<column name="phone number" type="text" jt="12" >
+			<column name="phone_number" prior="phone number" type="text" jt="12" >
 				<comment><![CDATA[An employees phone number (Uses text as it the most efficient way to store a phone number).]]></comment>
 			</column>
 			<index name="pk_student_1" unique="PRIMARY_KEY" >
@@ -260,7 +260,7 @@
 				<fk_column name="pk_fk_1_lesson_id" pk="lesson_id" />
 			</fk>
 		</table>
-		<table name="theoretical class" prior="practical class_0" >
+		<table name="theoreticalclass" prior="theoretical class" >
 			<comment><![CDATA[one of the employees possible titles.]]></comment>
 			<column name="pk_fk_lesson_id" prior="pk_fk_1_lesson_id" type="smallint" jt="5" mandatory="y" >
 				<comment><![CDATA[the pk_fk for this disjoint (Uses the same datatype as explained before).]]></comment>
@@ -268,7 +268,7 @@
 			<column name="classroom" prior="pk_fk_2_license_id" type="smallint" jt="5" mandatory="y" >
 				<comment><![CDATA[the classroom number (Uses smallint as the number will never be extraordinarily big).]]></comment>
 			</column>
-			<column name="max capacity" prior="vehicle" type="smallint" jt="5" >
+			<column name="max_capacity" prior="max capacity" type="smallint" jt="5" >
 				<comment><![CDATA[the max number of participants per lesson (Uses smallint as the number will never be extraordinarily big).]]></comment>
 			</column>
 			<column name="topic" prior="evaluation" type="varchar" length="50" jt="12" >
@@ -292,10 +292,10 @@
 		<entity schema="physical data model" name="lesson" color="C1D8EE" x="1120" y="336" />
 		<entity schema="physical data model" name="license" color="3986C1" x="864" y="512" />
 		<entity schema="physical data model" name="other" color="3986C1" x="592" y="544" />
-		<entity schema="physical data model" name="practical class" color="3986C1" x="1328" y="544" />
+		<entity schema="physical data model" name="practicalclass" color="3986C1" x="1328" y="544" />
 		<entity schema="physical data model" name="student" color="3986C1" x="1744" y="400" />
 		<entity schema="physical data model" name="studentbookslesson" color="3986C1" x="1440" y="432" />
-		<entity schema="physical data model" name="theoretical class" color="3986C1" x="1376" y="208" />
+		<entity schema="physical data model" name="theoreticalclass" color="3986C1" x="1376" y="208" />
 		<callout x="1056" y="832" pointer="Round" >
 			<comment><![CDATA[This is a layout - a diagram with tools.
 - Right-click the layout to create new tables. 
