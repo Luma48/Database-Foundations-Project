@@ -1,13 +1,14 @@
 
 CREATE TABLE Theoretical_Class(
-    Lesson_id SMALLINT PRIMARY KEY,
-    Classroom SMALLINT,
-    Max_capacity SMALLINT,
+    Theoretical_ClassID SERIAL PRIMARY KEY,
+    ClassRoom int,
+    MaxCapacity int,
     Topic varchar(50),
+    Lesson_id INT,
     FOREIGN KEY (Lesson_id) REFERENCES Lesson(Lesson_id)
 ) ;
 
-INSERT INTO Theoretical_Class (Classroom, Max_capacity, Topic, Lesson_id)
+INSERT INTO Theoretical_Class (ClassRoom, MaxCapacity, Topic, Lesson_id)
 VALUES
    (101, 30, 'Introduction to Manual Driving', 1),
    (102, 25, 'Basic Vehicle Control Techniques', 2),

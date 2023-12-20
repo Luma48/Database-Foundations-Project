@@ -1,14 +1,14 @@
 CREATE TABLE Instructor (
-    EmployeeID INT PRIMARY KEY,
-    FOREIGN KEY (EmployeeID) REFERENCES Employee(Employee_ID)
+    Employee_id SMALLINT PRIMARY KEY,
+    FOREIGN KEY (Employee_id) REFERENCES Employee(Employee_id)
 );
 
 CREATE TABLE AdministrativePosition (
-    EmployeeID INT PRIMARY KEY,
-    FOREIGN KEY (EmployeeID) REFERENCES Employee(Employee_ID)
+    Employee_id SMALLINT PRIMARY KEY,
+    FOREIGN KEY (Employee_id) REFERENCES Employee(Employee_id)
 ) ;
 
 CREATE TABLE Other (
-    EmployeeID INT PRIMARY KEY,
-    FOREIGN KEY (EmployeeID) REFERENCES Employee(Employee_ID)
+    Employee_id SMALLINT PRIMARY KEY,
+    FOREIGN KEY (Employee_id) REFERENCES Employee(Employee_id)
 );

@@ -1,9 +1,9 @@
 CREATE TABLE Lesson (
-    Lesson_id SMALLINT PRIMARY KEY,
-    Lesson_date DATE,
-    Lesson_time TIME
+    Lesson_Id INT PRIMARY KEY,
+    Lesson_Date DATE,
+    Lesson_Time VARCHAR(50)
 ) ;
-insert into Lesson (Lesson_id, Lesson_date, Lesson_time) values
+insert into Lesson (Lesson_Id, Lesson_Date, Lesson_Time) values
    (1, '2023-03-21', '19:28') ,
    (2, '2023-09-22', '21:39') ,
    (3, '2023-05-16', '1:09') ,
