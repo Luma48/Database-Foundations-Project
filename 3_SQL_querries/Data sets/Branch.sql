@@ -1,11 +1,10 @@
 create database Driving_school ,
 
 CREATE TABLE Branch (
-    BranchID SERIAL PRIMARY KEY,--it will auto-increamentas as of serial, so didnt need insert anything
+    Branch_id SERIAL PRIMARY KEY,--it will auto-increamentas as of serial, so didnt need insert anything
     Name varchar(50),
-    HeadQuater varchar(50),
-    ManagerID INT,
-    EmployeeCapacity INT,
+    HQ varchar(50),
+    Employee Capacity SMALLINT,
     Address VARCHAR(255)
 ) ,
 

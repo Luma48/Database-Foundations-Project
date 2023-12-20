@@ -1,9 +1,9 @@
 CREATE TABLE License (
-    License_id SERIAL PRIMARY KEY,
-    Category VARCHAR(50)
+    License_ID SERIAL PRIMARY KEY,
+    CATEGORY VARCHAR(50)
 ) ;
 
-INSERT INTO License_id (Category)
+INSERT INTO License (CATEGORY)
 VALUES
     ('Category A'),
     ('Category B'),

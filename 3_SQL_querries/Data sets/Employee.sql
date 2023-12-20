@@ -1,9 +1,8 @@
 CREATE TABLE Employee (
-    Employee_Id INT PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
+    Employee_Id SMALLINT PRIMARY KEY,
+    name VARCHAR(50),
     Date_of_Birth DATE NOT NULL,
-    PhoneNumber VARCHAR(20),
+    Phone_Number VARCHAR(20),
     gender VARCHAR(20) NULL
 ) ;
 insert into EMPLOYEE (Employee_Id, first_name, last_name, Date_of_Birth, PhoneNumber, gender) values

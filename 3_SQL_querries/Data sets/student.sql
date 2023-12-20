@@ -1,12 +1,12 @@
 CREATE TABLE STUDENT (
-    Student_id SMALLINT PRIMARY KEY,
-    First_name varchar(50),
-    Last_name varchar(50),
-    Date_of_birth DATE,
-    Phone_number smallint (20),
+    STUDENT_ID SERIAL PRIMARY KEY,
+    First_Name varchar(50),
+    Last_Name varchar(50),
+    Date_of_Birth DATE,
+    Phone_Number varchar (20),
     Gender varchar(20)
 ) ;
-insert into Student (First_name, Last_name, Date_of_birth, Phone_number, Gender) values
+insert into Student (First_Name, Last_Name, Date_of_Birth, Phone_Number, Gender) values
   ('Mill', 'Allsep', '2023-02-25', '665 478 2756', 'Male') ,
   ('Freddie', 'Beurich', '2023-05-09', '676 806 2999', 'Female') ,
   ('Gertrudis', 'Sabbatier', '2023-08-05', '541 658 7950', 'Female') ,

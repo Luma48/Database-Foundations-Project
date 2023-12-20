@@ -3,8 +3,8 @@
 CREATE TABLE EmailAddress (
     Email VARCHAR(50) PRIMARY KEY,
     Student_Id SERIAL,  -- Assuming Student_Id is a foreign key referencing STUDENT table
-    Employee_Id INT,    -- Assuming Employee_Id is a foreign key referencing Employee table
-    FOREIGN KEY (Student_Id) REFERENCES STUDENT(STUDENT_ID),
+    Employee_Id SMALLINT,    -- Assuming Employee_Id is a foreign key referencing Employee table
+    FOREIGN KEY (Student_Id) REFERENCES Student(Student_id),
     FOREIGN KEY (Employee_Id) REFERENCES Employee(Employee_Id)
 ) ;
 insert into EmailAddress (Email, Student_Id, Employee_Id) values
