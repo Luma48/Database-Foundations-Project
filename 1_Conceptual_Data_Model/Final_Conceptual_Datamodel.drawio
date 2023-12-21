@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-12-20T14:59:43.611Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="oXaUuykym_gT2Jbu2226" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-12-21T01:40:08.032Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="rgO75N45Uc7__voC8qg1" version="22.0.2" type="device">
   <diagram name="Page-1" id="94LBMi_QMn9_HoXm2CBJ">
-    <mxGraphModel dx="570" dy="1519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2590" dy="2615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -136,7 +136,7 @@
           <mxGeometry x="1523.84" y="450.61" width="230" height="50" as="geometry" />
         </mxCell>
         <mxCell id="3Ar2WPhDcIFh1BwXJXv_-50" value="TheoreticalClass" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1480.2" y="615.61" width="80" height="40" as="geometry" />
+          <mxGeometry x="1460" y="615.61" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="3Ar2WPhDcIFh1BwXJXv_-52" value="PracticalClass" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1714.1999999999998" y="615.61" width="83.25" height="40" as="geometry" />
