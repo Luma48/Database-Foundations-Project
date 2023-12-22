@@ -1,38 +1,39 @@
-1) for the table branch
-select * from Branch
+--1) TABLE BRANCH
+-- Simple select:
+SELECT * FROM Branch
 
-Select EmployeeCapacity
-from Branch 
-where EmployeeCapacity > 300;
+-- Specific select with a where conditional:
+SELECT EmployeeCapacity
+FROM Branch 
+WHERE EmployeeCapacity > 300;
 
-select * from Branch 
-where city = 'Haasrode'
-or city = 'Tienen'
+-- Specific select with a where conditional and an operator:
+SELECT * FROM Branch 
+WHERE city = 'Haasrode'
+OR city = 'Tienen'
 
 
 
-2) for the table Email address
+--2) TABLE EMAILADDRESS
 
+-- A simple update:
 UPDATE EmailAddress
 SET Email = 'new_student@example.com'
 WHERE StudentId = 123;
 
 
--- Delete the email address for an employee
-
+-- A simple delete:
 DELETE FROM EmailAddress
 WHERE EmployeeId = 456;
 
 
--- Retrieve all email addresses
-
-
+-- Retrieve all email addresses:
 SELECT * FROM EmailAddress WHERE EmployeeId IS NOT NULL;
--- Retrieve email addresses along with student or employee information
 
 
-3) for the table employee
+--3) TABLE EMPLOYEE
 
+-- A grouping and counting how many people have a gender:
 SELECT gender, COUNT(*) AS EmployeeCount
 FROM Employee
 GROUP BY gender;
@@ -54,7 +55,7 @@ SELECT *
 FROM STUDENT
 FULL OUTER JOIN Lesson ON STUDENT.STUDENT_ID = Lesson.Lesson_Id;
 
-4) for the table lesson 
+--4) TABLE LESSON 
 
 -- Retrieve all lessons
 SELECT * FROM Lesson;
@@ -73,7 +74,7 @@ FROM Lesson
 WHERE CAST(Lesson_Time AS TIME) > '12:00 PM';
 
 
-5) for the table student
+--5) TABLE STUDENT
 
 -- Retrieve all students
 SELECT * FROM STUDENT;
@@ -98,7 +99,7 @@ FROM STUDENT
 INNER JOIN Lesson ON STUDENT.STUDENT_ID = Lesson.Lesson_Id;
 
 
-6) for the studentbooklesson
+--6) TABLE STUDENTBOOKSLESSON
 
 -- Insert a new record
 INSERT INTO studentbooklesson (Student_Id, Lesson_Id, Vehicle_Type, Passed_Theoretical)
@@ -124,7 +125,7 @@ INNER JOIN Lesson L ON SBL.Lesson_Id = L.Lesson_Id;
 
 
 
-7) for the table Theoretical_Class
+--7) TABLE THEORETICAL_CLASS
 
 UPDATE Theoretical_Class
 SET Topic = 'Advanced SQL Queries'
