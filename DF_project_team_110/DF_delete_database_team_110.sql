@@ -1,0 +1,1 @@
+DROP SCHEMA df_project_group_110
