@@ -1,3 +1,5 @@
+SET search_path TO team_110;
+
 CREATE TABLE Instructor (
     Employee_id SMALLINT PRIMARY KEY,
     FOREIGN KEY (Employee_id) REFERENCES Employee(Employee_id)

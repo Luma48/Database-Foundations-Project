@@ -1,3 +1,5 @@
+SET search_path TO team_110;
+
 CREATE TABLE Practical_Class (
     Practical_ClassID SERIAL PRIMARY KEY,
     Vehicle VARCHAR(50),

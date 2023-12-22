@@ -1,3 +1,6 @@
+SET search_path TO team_110;
+
+
 
 CREATE TABLE Theoretical_Class(
     Theoretical_ClassID SERIAL PRIMARY KEY,
@@ -49,5 +52,5 @@ VALUES
    (802, 22, 'Cybersecurity in Databases', 37),
    (803, 30, 'IoT Data Management', 38),
    (804, 25, 'Database DevOps Practices', 39),
-   (805, 33, 'Data Governance Strategies', 40) 
+   (805, 33, 'Data Governance Strategies', 40);
 

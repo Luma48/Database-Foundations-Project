@@ -1,3 +1,5 @@
+SET search_path TO team_110;
+
 CREATE TABLE License (
     License_ID SERIAL PRIMARY KEY,
     CATEGORY VARCHAR(50)
