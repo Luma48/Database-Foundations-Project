@@ -1,4 +1,4 @@
-SET search_path TO team_110;
+SET search_path TO "df_project_group_110";
 
 
 CREATE TABLE Branch (
@@ -15,8 +15,4 @@ INSERT INTO Branch (Name, HQ, Employee_Capacity, Address) VALUES
     ('Tienen', 'Regional Office', 600, '937 Autumn Leaf Parkway'),
     ('Sint-Niklaas', 'Local Office', 99, '9 Gale Alley'),
     ('Ghent', 'District Office', 55, '2 Shasta Parkway');
-
-
-GRANT SELECT ON ALL TABLES IN SCHEMA ztest TO local_r0922952;
-GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA ztest TO local_r0922952;
 

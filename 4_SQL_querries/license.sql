@@ -1,4 +1,4 @@
-SET search_path TO team_110;
+SET search_path TO "df_project_group_110";
 
 CREATE TABLE License (
     License_ID SERIAL PRIMARY KEY,

@@ -1,4 +1,4 @@
-SET search_path TO team_110;
+SET search_path TO "df_project_group_110";
 
 CREATE TABLE studentbooklesson (
     Book_Id SERIAL PRIMARY KEY,
@@ -252,13 +252,4 @@ VALUES
   (239, 239, 'car', false) ,
   (240, 240, 'truck', true) ,
   (241, 241, 'car', true) ,
-  (242, 242, 'car', true) ,
-  (243, 243, 'van', true) ,
-  (244, 244, 'truck', true) ,
-  (245, 245, 'van', false) ,
-  (246, 246, 'truck', false) ,
-  (247, 247, 'truck', false) ,
-  (248, 248, 'car', false) ,
-  (249, 249, 'van', false) ,
-  (250, 250, 'van', false) ,
-  (251, 251, 'truck', false);
+  (242, 242, 'car', true);
